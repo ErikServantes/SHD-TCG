@@ -19,16 +19,23 @@ body {
     max-height: 100%;
 }
 
-.card .custo {
+.custo-container {
     position: absolute;
     top: 2px;
     left: 4px;
-    font-size: 12px;
-    font-weight: bold;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: white; /* Cor de fundo do círculo */
+    border-radius: 50%; /* Faz o container ser circular */
+    border: 1px solid black; /* Adiciona uma borda ao círculo */
+}
+
+.card .custo {
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .card .titulo {
