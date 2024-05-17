@@ -74,7 +74,7 @@ body {
 .card .tipo {
     position: absolute;
     top: 110px;
-    /*left: 68px;*/
+    left: 68px;
     font-size: 10px;
     font-weight: bold;
     text-align: center;
@@ -102,7 +102,7 @@ body {
 .card .id {
     position: absolute;
     bottom: 2px;
-    right: 7px;
+    right: 2px;
     font-size: 7px;
     text-align: right;
     font-weight: bold;
