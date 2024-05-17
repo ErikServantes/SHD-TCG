@@ -22,7 +22,7 @@ body {
 .card .custo {
     position: absolute;
     top: 2px;
-    left: 7px;
+    left: 4px;
     font-size: 12px;
     font-weight: bold;
     height: 15px;
@@ -34,7 +34,7 @@ body {
 .card .titulo {
     position: absolute;
     top: 1px; 
-    left: 20px;
+    left: 22px;
     font-size: 10px;
     font-weight: bold;
     height: 12px;
@@ -43,7 +43,7 @@ body {
 .card .subtitulo {
     position: absolute;
     top: 12px; 
-    left: 20px;
+    left: 22px;
     font-size: 6px;
     height: 12px;
 }
