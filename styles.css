@@ -21,10 +21,11 @@ body {
 
 .custo-container {
     position: absolute;
-    top: 2px;
-    left: 4px;
-    width: 20px;
-    height: 20px;
+    top: 1px;
+    left: 1px;
+    background-color: rgba(255, 255, 255, 0.75); /* Caixa semi-transparente */
+    width: 18px;
+    height: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,8 +112,8 @@ body {
 .card .id-container {
     position: absolute;
     bottom: 1px;
-    right: 2px;
-    background-color: rgba(255, 255, 255, 0.5); /* Caixa semi-transparente */
+    right: 1px;
+    background-color: rgba(255, 255, 255, 0.75); /* Caixa semi-transparente */
     padding: 2px 4px;
     border-radius: 3px;
 }
