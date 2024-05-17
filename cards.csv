@@ -1,0 +1,13 @@
+Custo,Título,Subtítulo,Cultura,Força,Agilidade,Vitalidade,Tipo,Texto,Lore,ID,Raridade
+1,Mook,O Vingador,Sumyr,10,5,3,Personagem,Este texto é uma farsa 1,Este lore não existe !,1,R
+2,Kÿron,O Perfecionista,Sumyr,14,3,5,Companheiro,Este texto é uma farsa 2,Este lore não existe .,2,I
+3,Sernunos,O Manipulador da Verdade,GON,11,1,5,Possessão,Este texto é uma farsa 3,Este lore não existe ?,3,C
+4,Erik,O Vingador,Sumyr,10,5,3,Personagem,Este texto é uma farsa 1,Este lore não existe !,4,R
+5,Martha,O Perfecionista,GON,14,3,5,Companheiro,Este texto é uma farsa 2,Este lore não existe .,5,I
+6,Victorya,O Manipulador da Verdade,GON,11,1,5,Possessão,Este texto é uma farsa 3,Este lore não existe ?,6,C
+7,Loye,O Vingador,Sumyr,10,5,3,Personagem,Este texto é uma farsa 1,Este lore não existe !,7,R
+8,Kÿron,O Perfecionista,GON,14,3,5,Companheiro,Este texto é uma farsa 2,Este lore não existe .,8,I
+9,Sernunos,O Manipulador da Verdade,Sumyr,11,1,5,Possessão,Este texto é uma farsa 3,Este lore não existe ?,4,C
+10,Mook,O Vingador,GON,10,5,3,Personagem,Este texto é uma farsa 1,Este lore não existe !,1,R
+11,Kÿron,O Perfecionista,Anuviah,14,3,5,Companheiro,Este texto é uma farsa 2,Este lore não existe .,2,I
+12,Sernunos,O Manipulador da Verdade,Sumyr,11,1,5,Possessão,Este texto é uma farsa 3,Este lore não existe ?,3,C

@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 246.67px;
+    height: 360px;
+    border: 4px solid #000;
+    margin: 10px;
+    position: relative;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card .custo {
+    position: absolute;
+    top: 3.33px;
+    left: calc(3.33px + 10px);
+    font-size: 20px;
+    font-weight: bold;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .titulo {
+    position: absolute;
+    top: 1px; /* Mover 15 linhas para baixo */
+    left: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 23.33px;
+}
+
+.card .subtitulo {
+    position: absolute;
+    top: 20px; /* Ajustar conforme a posição do título */
+    left: 40px;
+    font-size: 12px;
+    height: 23.33px;
+}
+
+.card .ilustracao {
+    position: absolute;
+    top: calc(50px - 15px); /* Mover 5 linhas para cima */
+    left: 0;
+    width: 100%;
+    height: 197.34px; /* Altura ajustada para manter a proporção 5:4 */
+    background-size: cover; /* Cobrir a área */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card .atributos {
+    position: absolute;
+    top: 100px; /* Reposicionar abaixo da imagem de ilustração */
+    right: 15px;
+    font-size: 18px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.card .tipo {
+    position: absolute;
+    top: 220px; /* Ajuste conforme necessário para ficar abaixo da imagem */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13.34px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card .texto {
+    position: absolute;
+    top: 250px; /* Logo abaixo do tipo com margem */
+    left: 10px;
+    right: 10px;
+    font-size: 12px;
+    text-align: justify;
+}
+
+.card .lore {
+    position: absolute;
+    top: 300px; /* Ajustado para ficar abaixo do texto */
+    left: 10px;
+    right: 10px;
+    font-size: 10px;
+    font-style: italic;
+    text-align: justify;
+}
+
+.card .id {
+    position: absolute;
+    bottom: 3.33px;
+    right: calc(3.33px + 10px);
+    font-size: 10.66px;
+    font-weight: bold;
+}
