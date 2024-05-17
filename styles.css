@@ -42,7 +42,7 @@ body {
 
 .card .subtitulo {
     position: absolute;
-    top: 14px; 
+    top: 13px; 
     left: 22px;
     font-size: 6px;
     height: 12px;
@@ -50,7 +50,7 @@ body {
 
 .card .ilustracao {
     position: absolute;
-    top: 20px; /* Topo da ilusração */
+    top: 21px; /* Topo da ilusração */
     left: 0px;
     width: 100%;
     height: 90px; 
