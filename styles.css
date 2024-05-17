@@ -83,19 +83,17 @@ body {
 }
 
 .card .texto {
-    position: absolute;
-    top: 125px; 
-    left: 5px;
-    right: 5px;
+    margin-top: 130px; /* Ajustar conforme necessário */
+    margin-left: 5px;
+    margin-right: 5px;
     font-size: 9px;
     text-align: justify;
 }
 
 .card .lore {
-    position: absolute;
-    top: 155px; 
-    left: 5px;
-    right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px; /* Espaçamento entre o texto e a lore */
     font-size: 5px;
     font-style: italic;
     text-align: justify;
