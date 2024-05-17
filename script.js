@@ -31,7 +31,9 @@ function createCard(data) {
     card.style.backgroundImage = `url('${imagePath}')`;
 
     card.innerHTML = `
-        <div class="custo">${data[0].trim()}</div>
+        <div class="custo-container">
+            <div class="custo">${data[0].trim()}</div>
+        </div>
         <div class="titulo">${data[1].trim()}</div>
         <div class="subtitulo">${data[2].trim()}</div>
         <div class="ilustracao" style="background-image: url('${illustrationPath}');"></div>
