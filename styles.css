@@ -50,10 +50,10 @@ body {
 
 .card .ilustracao {
     position: absolute;
-    top: 18px; /* Mover 5 linhas para cima */
+    top: 20px; /* Topo da ilusração */
     left: 0px;
     width: 100%;
-    height: 100px; /* Altura ajustada para manter a proporção 5:4 */
+    height: 90px; 
     background-size: cover; /* Cobrir a área */
     background-repeat: no-repeat;
     background-position: center;
@@ -81,7 +81,7 @@ body {
 
 .card .texto {
     position: absolute;
-    top: 115px; /* Logo abaixo do tipo com margem */
+    top: 115px; 
     left: 5px;
     right: 5px;
     font-size: 9px;
@@ -90,7 +90,7 @@ body {
 
 .card .lore {
     position: absolute;
-    top: 150px; /* Ajustado para ficar abaixo do texto */
+    top: 150px; 
     left: 5px;
     right: 5px;
     font-size: 5px;
