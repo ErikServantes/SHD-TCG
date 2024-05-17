@@ -61,10 +61,10 @@ body {
 
 .card .atributos {
     position: absolute;
-    top: 50px; /* Reposicionar abaixo da imagem de ilustração */
+    top: 50px;
     right: 7px;
     font-size: 10px;
-    text-align: right;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -72,9 +72,9 @@ body {
 
 .card .tipo {
     position: absolute;
-    top: 110px; /* Ajuste conforme necessário para ficar abaixo da imagem */
+    top: 115px; /* Ajuste conforme necessário para ficar abaixo da imagem */
     left: 50%;
-    transform: translate(-150%, -150%);
+    /*transform: translate(50%, 50%);*/
     font-size: 10px;
     font-weight: bold;
     text-align: center;
@@ -82,10 +82,10 @@ body {
 
 .card .texto {
     position: absolute;
-    top: 125px; /* Logo abaixo do tipo com margem */
+    top: 115px; /* Logo abaixo do tipo com margem */
     left: 5px;
     right: 5px;
-    font-size: 6px;
+    font-size: 9px;
     text-align: justify;
 }
 
