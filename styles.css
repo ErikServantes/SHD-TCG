@@ -42,7 +42,7 @@ body {
 
 .card .subtitulo {
     position: absolute;
-    top: 12px; 
+    top: 14px; 
     left: 22px;
     font-size: 6px;
     height: 12px;
@@ -74,7 +74,8 @@ body {
 .card .tipo {
     position: absolute;
     top: 110px;
-    left: 68px;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 10px;
     font-weight: bold;
     text-align: center;
