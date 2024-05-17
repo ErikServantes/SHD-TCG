@@ -61,7 +61,7 @@ body {
 
 .card .atributos {
     position: absolute;
-    top: 30px;
+    top: 33px;
     right: 7px;
     font-size: 10px;
     font-weight: bold;
@@ -69,6 +69,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    line-height: 2;
 }
 
 .card .tipo {
