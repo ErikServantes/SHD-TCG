@@ -49,9 +49,8 @@ body {
     width: 18px;
     height: 18px;
     display: flex;
-    text-align: justify;
-    /*align-items: center;
-    justify-content: center;*/
+    align-items: center;
+    justify-content: center;
     background-color: rgba(255, 255, 255, 1); /* Caixa semi-transparente */
     border-radius: 50%; /* Faz o container ser circular */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
@@ -78,6 +77,7 @@ body {
     position: absolute;
     top: 34px;
     right: 0px;
+    text-align: justify;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -89,8 +89,9 @@ body {
     height: 18px;
     margin-bottom: 2px;
     display: flex;
-    align-items: right;
-    justify-content: flex-start;
+    text-align: justify;
+    /*align-items: right;
+    justify-content: flex-start;*/
     font-size: 8px; /* Diminuído o tamanho da fonte do valor */
     font-weight: bold;
     color: black;
