@@ -45,7 +45,7 @@ function createCard(data) {
                 &#9829; ${data[5].trim()}
             </div>
             <div class="atributo" style="background-color: rgba(232, 234, 170, 0.5);">
-                &#9889; ${data[6].trim()}
+                &#x3df; ${data[6].trim()}
             </div>
         </div>
         <div class="tipo">${data[7].trim()}</div>
