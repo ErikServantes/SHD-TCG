@@ -84,17 +84,17 @@ body {
 }
 
 .atributo {
-    width: 22px;
+    width: 50px; /* Ajuste conforme necessário para garantir que o texto não quebre linha */
     height: 18px;
     margin-bottom: 2px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     font-size: 8px; /* Diminuído o tamanho da fonte do valor */
     font-weight: bold;
     color: black;
-    text-align: right;
-    padding-left: 3px;
+    text-align: right; /* Alinha o texto à direita */
+    padding-right: 3px; /* Adicionado espaçamento entre o texto e a borda direita */
     background-color: rgba(217, 203, 128, 0.9);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
 }
