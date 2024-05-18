@@ -1,3 +1,27 @@
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('cards.csv')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok: ' + response.statusText);
+            }
+            return response.text();
+        })
+        .then(data => {
+            const rows = data.split('\n').slice(1);
+            const container = document.getElementById('card-container');
+            rows.forEach(row => {
+                if (row.trim() !== '') {
+                    const columns = row.split(',');
+                    const card = createCard(columns);
+                    container.appendChild(card);
+                }
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching or processing the CSV file:', error);
+        });
+});
+
 function createCard(data) {
     const imagePath = `images/${data[3].trim()}.png`;
     const illustrationPath = `images/${data[10].trim()}.png`;
@@ -39,4 +63,17 @@ function createCard(data) {
     `;
 
     return card;
+}
+
+function getColorByRarity(rarity) {
+    switch(rarity) {
+        case 'R':
+            return 'gold';
+        case 'I':
+            return 'silver';
+        case 'C':
+            return 'white';
+        default:
+            return 'black';
+    }
 }
