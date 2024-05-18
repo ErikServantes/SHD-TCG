@@ -84,7 +84,8 @@ body {
 }
 
 .atributo {
-    width: 30; 
+    width: auto; /* Permite que a largura se ajuste ao conteúdo */
+    min-width: 30px; /* Define a largura mínima */
     height: 18px;
     margin-bottom: 2px;
     display: flex;
