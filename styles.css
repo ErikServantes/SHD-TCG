@@ -93,7 +93,7 @@ body {
     font-size: 8px; /* Diminuído o tamanho da fonte do valor */
     font-weight: bold;
     color: black;
-    text-align: justify;
+    text-align: right;
     padding-left: 3px;
     background-color: rgba(217, 203, 128, 0.9);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
