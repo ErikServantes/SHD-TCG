@@ -84,7 +84,7 @@ body {
 }
 
 .atributo {
-    width: auto; /* Ajuste para a largura automática */
+    width: 30; 
     height: 18px;
     margin-bottom: 2px;
     display: flex;
