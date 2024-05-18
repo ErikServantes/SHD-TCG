@@ -82,6 +82,7 @@ body {
     flex-direction: column;
     align-items: flex-end;
     line-height: 2;
+    border-radius: 2px;
 }
 
 .atributo {
