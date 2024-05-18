@@ -21,16 +21,16 @@ body {
 
 .custo-container {
     position: absolute;
-    top: 2px;
-    left: 4px;
-    width: 20px;
-    height: 20px;
+    top: 1px;
+    left: 1px;
+    width: 18px;
+    height: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white; /* Cor de fundo do círculo */
+    background-color: rgba(255, 255, 255, 0.25); /* Caixa semi-transparente */
     border-radius: 50%; /* Faz o container ser circular */
-    border: 1px solid black; /* Adiciona uma borda ao círculo */
+    /*border: 1px solid black; /* Adiciona uma borda ao círculo */
 }
 
 .card .custo {
