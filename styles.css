@@ -100,20 +100,22 @@ body {
     text-align: center;
 }
 
-.card .texto {
+.card .texto-lore-container {
     position: absolute;
     top: 125px; 
     left: 5px;
     right: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .texto {
     font-size: 9px;
     text-align: justify;
+    margin-bottom: 5px; /* Espaço entre texto e lore */
 }
 
 .card .lore {
-    position: absolute;
-    top: 155px; 
-    left: 5px;
-    right: 5px;
     font-size: 5px;
     font-style: italic;
     text-align: center;
