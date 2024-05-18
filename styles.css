@@ -19,26 +19,6 @@ body {
     max-height: 100%;
 }
 
-.custo-container {
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    width: 18px;
-    height: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 1); /* Caixa semi-transparente */
-    border-radius: 50%; /* Faz o container ser circular */
-    /*border: 1px solid black; /* Adiciona uma borda ao círculo */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
-}
-
-.card .custo {
-    font-size: 12px;
-    font-weight: bold;
-}
-
 .titulo-subtitulo-container {
     position: absolute;
     top: 1px;
@@ -60,6 +40,26 @@ body {
 .card .subtitulo {
     font-size: 6px;
     height: 9px;
+}
+
+.custo-container {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1); /* Caixa semi-transparente */
+    border-radius: 50%; /* Faz o container ser circular */
+    /*border: 1px solid black; /* Adiciona uma borda ao círculo */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.card .custo {
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .card .ilustracao {
