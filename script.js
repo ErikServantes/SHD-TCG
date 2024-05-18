@@ -40,13 +40,13 @@ function createCard(data) {
         <div class="subtitulo">${data[2].trim()}</div>
         <div class="ilustracao" style="background-image: url('${illustrationPath}');"></div>
         <div class="atributos">
-            <div class="atributo" style="background-color: rgba(128, 179, 237, 0.75);">
+            <div class="atributo" style="background-color: rgba(201, 182, 76, 0.95);">
                 &#9876; ${data[4].trim()}
             </div>
-            <div class="atributo" style="background-color: rgba(232, 64, 64, 0.75);">
+            <div class="atributo" style="background-color: rgba(201, 182, 76, 0.95);">
                 &#9829; ${data[5].trim()}
             </div>
-            <div class="atributo" style="background-color: rgba(232, 234, 170, 0.75);">
+            <div class="atributo" style="background-color: rgba(201, 182, 76, 0.95);">
                 &#x3df; ${data[6].trim()}
             </div>
         </div>
