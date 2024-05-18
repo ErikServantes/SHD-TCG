@@ -30,7 +30,8 @@ function createCard(data) {
     card.className = 'card';
     card.style.backgroundImage = `url('${imagePath}')`;
 
-    const rarityColor = getColorByRarity(data[11].trim());
+    const rarity = padRarity(data[11].trim());
+    const rarityColor = getColorByRarity(rarity);
 
     card.innerHTML = `
         <div class="custo-container">
@@ -63,6 +64,10 @@ function createCard(data) {
     `;
 
     return card;
+}
+
+function padRarity(rarity) {
+    return rarity.padStart(3, '0');
 }
 
 function getColorByRarity(rarity) {
