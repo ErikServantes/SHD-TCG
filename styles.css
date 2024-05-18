@@ -28,7 +28,7 @@ body {
     text-align: left;
     padding: 0px 15px;
     background-color: rgba(255, 255, 255, 0.9);
-    z-index: 1; /* Certifique-se de que este z-index seja menor */
+    z-index: 1;
 }
 
 .card .titulo {
@@ -53,7 +53,6 @@ body {
     justify-content: center;
     background-color: rgba(255, 255, 255, 1); /* Caixa semi-transparente */
     border-radius: 50%; /* Faz o container ser circular */
-    /*border: 1px solid black; /* Adiciona uma borda ao círculo */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
     z-index: 2; /* Adicionado z-index maior */
 }
