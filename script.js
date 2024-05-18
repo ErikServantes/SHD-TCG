@@ -24,11 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function createCard(data) {
     const imagePath = `images/${data[3].trim()}.png`;
-    const illustrationPath = `images/${data[10].trim()}.png`; // Caminho da imagem de ilustração com base no ID
+    const illustrationPath = `images/${data[10].trim()}.png`;
 
     const card = document.createElement('div');
     card.className = 'card';
     card.style.backgroundImage = `url('${imagePath}')`;
+
+    const rarityColor = getColorByRarity(data[11].trim());
 
     card.innerHTML = `
         <div class="custo-container">
@@ -53,8 +55,8 @@ function createCard(data) {
             <div class="texto">${data[8].trim()}</div>
             <div class="lore">${data[9].trim()}</div>
         </div>
-        <div class="id-container">
-            <div class="id" style="color: ${getColorByRarity(data[11].trim())}">${data[10].trim()}</div>
+        <div class="id-container" style="background-color: ${rarityColor};">
+            <div class="id">${data[10].trim()}</div>
         </div>
     `;
 
