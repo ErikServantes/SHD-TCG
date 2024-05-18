@@ -70,7 +70,7 @@ function getColorByRarity(rarity) {
         case 'I':
             return 'silver';
         case 'C':
-            return 'black';
+            return 'white';
         default:
             return 'black';
     }
