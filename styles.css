@@ -127,14 +127,15 @@ body {
 
 .card .id-container {
     position: absolute;
-    bottom: 1px;
-    right: 2px;
+    bottom: 0px;
+    right: 0px;
+    left: 127px;
     padding: 1px 4px;
-    border-radius: 3px;
+    /*border-radius: 1px;*/
 }
 
 .card .id {
-    font-size: 3px;
+    font-size: 5px;
     text-align: right;
     font-weight: bold;
     color: black; /* Define a cor do texto como preto */
