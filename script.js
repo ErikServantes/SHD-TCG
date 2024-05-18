@@ -45,12 +45,14 @@ function createCard(data) {
                 &#9829; ${data[5].trim()}
             </div>
             <div class="atributo" style="background-color: rgba(232, 234, 170, 0.5);">
-                &#x3df; ${data[6].trim()}
+                &#9889; ${data[6].trim()}
             </div>
         </div>
         <div class="tipo">${data[7].trim()}</div>
-        <div class="texto">${data[8].trim()}</div>
-        <div class="lore">${data[9].trim()}</div>
+        <div class="texto-lore-container">
+            <div class="texto">${data[8].trim()}</div>
+            <div class="lore">${data[9].trim()}</div>
+        </div>
         <div class="id-container">
             <div class="id" style="color: ${getColorByRarity(data[11].trim())}">${data[10].trim()}</div>
         </div>
