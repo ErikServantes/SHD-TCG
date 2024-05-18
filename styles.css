@@ -127,11 +127,11 @@ body {
 
 .card .id-container {
     position: absolute;
-    bottom: 0px;
-    right: 0px;
-    left: 127px;
+    bottom: 1px;
+    right: 1px;
+    left: 120px;
     padding: 1px 4px;
-    /*border-radius: 1px;*/
+    border-radius: 1px;
 }
 
 .card .id {
