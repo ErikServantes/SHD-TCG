@@ -1,27 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('cards.csv')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok: ' + response.statusText);
-            }
-            return response.text();
-        })
-        .then(data => {
-            const rows = data.split('\n').slice(1);
-            const container = document.getElementById('card-container');
-            rows.forEach(row => {
-                if (row.trim() !== '') {
-                    const columns = row.split(',');
-                    const card = createCard(columns);
-                    container.appendChild(card);
-                }
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching or processing the CSV file:', error);
-        });
-});
-
 function createCard(data) {
     const imagePath = `images/${data[3].trim()}.png`;
     const illustrationPath = `images/${data[10].trim()}.png`;
@@ -43,13 +19,13 @@ function createCard(data) {
         <div class="ilustracao" style="background-image: url('${illustrationPath}');"></div>
         <div class="atributos">
             <div class="atributo" style="background-color: rgba(217, 203, 128, 0.9);">
-                &#9876; ${data[4].trim()}
+                ${data[4].trim()} <span class="simbolo">&#9876;</span>
             </div>
             <div class="atributo" style="background-color: rgba(217, 203, 128, 0.9);">
-                &#9829; ${data[5].trim()}
+                ${data[5].trim()} <span class="simbolo">&#9829;</span>
             </div>
             <div class="atributo" style="background-color: rgba(217, 203, 128, 0.9);">
-                &#x3df; ${data[6].trim()}
+                ${data[6].trim()} <span class="simbolo">&#x3df;</span>
             </div>
         </div>
         <div class="tipo">${data[7].trim()}</div>
@@ -63,17 +39,4 @@ function createCard(data) {
     `;
 
     return card;
-}
-
-function getColorByRarity(rarity) {
-    switch(rarity) {
-        case 'R':
-            return 'gold';
-        case 'I':
-            return 'silver';
-        case 'C':
-            return 'white';
-        default:
-            return 'black';
-    }
 }
