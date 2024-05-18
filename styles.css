@@ -84,7 +84,7 @@ body {
 }
 
 .atributo {
-    width: 50px; /* Ajuste conforme necessário para garantir que o texto não quebre linha */
+    width: auto; /* Ajuste para a largura automática */
     height: 18px;
     margin-bottom: 2px;
     display: flex;
@@ -94,7 +94,7 @@ body {
     font-weight: bold;
     color: black;
     text-align: right; /* Alinha o texto à direita */
-    padding-right: 3px; /* Adicionado espaçamento entre o texto e a borda direita */
+    padding: 0 3px; /* Adicionado espaçamento entre o texto e a borda */
     background-color: rgba(217, 203, 128, 0.9);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
 }
