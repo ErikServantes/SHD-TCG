@@ -106,7 +106,7 @@ body {
     left: 8px;
     right: 8px;
     bottom: 12px;
-    background-color: rgba(255, 255, 255, 0.5); /* Caixa semi-transparente */
+    background-color: rgba(255, 255, 255, 0.7); /* Caixa semi-transparente */
     display: flex;
     flex-direction: column;
 }
@@ -128,7 +128,7 @@ body {
     bottom: 1px;
     right: 2px;
     background-color: rgba(255, 255, 255, 0.5); /* Caixa semi-transparente */
-    padding: 2px 4px;
+    padding: 2px 2px;
     border-radius: 3px;
 }
 
