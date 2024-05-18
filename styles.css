@@ -82,7 +82,7 @@ body {
     margin-bottom: 2px;
     display: flex;
     align-items: justify;
-    justify-content: center;
+    justify-content: justify;
     font-size: 10px;
     font-weight: bold;
     color: black;
