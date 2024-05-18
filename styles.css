@@ -103,8 +103,8 @@ body {
 .card .texto-lore-container {
     position: absolute;
     top: 125px; 
-    left: 8px;
-    right: 8px;
+    left: 0px;
+    right: 0px;
     bottom: 12px;
     background-color: rgba(255, 255, 255, 0.7); /* Caixa semi-transparente */
     padding: 5px 10px;
