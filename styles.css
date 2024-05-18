@@ -41,10 +41,10 @@ body {
 
 .titulo-subtitulo-container {
     position: absolute;
-    top: 0px;
+    top: 2px;
     left: 10px;
     right: 0px;
-    height: 18px;
+    height: 16px;
     text-align: left;
     padding: 0px 15px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -54,12 +54,12 @@ body {
 .card .titulo {
     font-size: 10px;
     font-weight: bold;
-    height: 12px;
+    height: 11px;
 }
 
 .card .subtitulo {
     font-size: 6px;
-    height: 12px;
+    height: 8px;
 }
 
 .card .ilustracao {
