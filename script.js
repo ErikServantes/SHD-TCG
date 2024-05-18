@@ -36,8 +36,10 @@ function createCard(data) {
         <div class="custo-container">
             <div class="custo">${data[0].trim()}</div>
         </div>
-        <div class="titulo">${data[1].trim()}</div>
-        <div class="subtitulo">${data[2].trim()}</div>
+        <div class="titulo-subtitulo-container">
+            <div class="titulo">${data[1].trim()}</div>
+            <div class="subtitulo">${data[2].trim()}</div>
+        </div>
         <div class="ilustracao" style="background-image: url('${illustrationPath}');"></div>
         <div class="atributos">
             <div class="atributo" style="background-color: rgba(217, 203, 128, 0.9);">
