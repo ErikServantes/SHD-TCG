@@ -82,11 +82,12 @@ body {
     margin-bottom: 2px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     font-size: 10px;
     font-weight: bold;
     color: black;
     text-align: justify;
+    padding-left: 5px;
 }
 
 .card .tipo {
