@@ -39,19 +39,20 @@ body {
     font-weight: bold;
 }
 
-.card .titulo {
+.titulo-subtitulo-container {
     position: absolute;
-    top: 1px; 
+    top: 1px;
     left: 22px;
+    right: 1px;
+}
+
+.card .titulo {
     font-size: 10px;
     font-weight: bold;
     height: 12px;
 }
 
 .card .subtitulo {
-    position: absolute;
-    top: 13px; 
-    left: 22px;
     font-size: 6px;
     height: 12px;
 }
