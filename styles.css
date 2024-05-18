@@ -96,8 +96,10 @@ body {
 .card .tipo {
     position: absolute;
     top: 117px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 0px;
+    right: 0px;
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
     font-size: 8px;
     font-weight: bold;
     text-align: center;
