@@ -77,31 +77,32 @@ body {
 .card .atributos {
     position: absolute;
     top: 34px;
-    left: 117px;
-    /*right: 0px;*/
-    border-radius: 2px;
+    right: 0px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     line-height: 2;
-
 }
 
 .atributo {
     width: 22px;
     height: 18px;
-    border-radius: 2px;
     margin-bottom: 2px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    font-size: 10px;
+    font-size: 8px; /* Diminuído o tamanho da fonte do valor */
     font-weight: bold;
     color: black;
     text-align: justify;
     padding-left: 3px;
     background-color: rgba(217, 203, 128, 0.9);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.atributo .simbolo {
+    font-size: 13px; /* Aumentado o tamanho da fonte do símbolo */
+    margin-left: 3px; /* Adicionado espaçamento entre valor e símbolo */
 }
 
 .card .tipo {
