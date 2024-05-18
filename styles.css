@@ -77,7 +77,6 @@ body {
     position: absolute;
     top: 34px;
     right: 0px;
-    text-align: justify;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -89,13 +88,12 @@ body {
     height: 18px;
     margin-bottom: 2px;
     display: flex;
-    text-align: justify;
-    /*align-items: right;
-    justify-content: flex-start;*/
+    align-items: center;
+    justify-content: flex-start;
     font-size: 8px; /* Diminuído o tamanho da fonte do valor */
     font-weight: bold;
     color: black;
-    text-align: right;
+    text-align: justify;
     padding-left: 3px;
     background-color: rgba(217, 203, 128, 0.9);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
