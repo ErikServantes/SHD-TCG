@@ -91,7 +91,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 8px; /* Diminuído o tamanho da fonte do valor */
+    font-size: 8px; /* Tamanho da fonte do valor */
     font-weight: bold;
     color: black;
     text-align: right; /* Alinha o texto à direita */
@@ -101,7 +101,7 @@ body {
 }
 
 .atributo .simbolo {
-    font-size: 13px; /* Aumentado o tamanho da fonte do símbolo */
+    font-size: 6px; /* Tamanho do simbolo */
     margin-left: 2px; /* Adicionado espaçamento entre valor e símbolo */
 }
 
