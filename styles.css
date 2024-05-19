@@ -1,13 +1,16 @@
+/* Define a fonte padrão do corpo */
 body {
     font-family: Arial, sans-serif;
 }
 
+/* Estilo do container das cartas */
 #card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/* Estilo geral das cartas */
 .card {
     width: 137px;
     height: 200px;
@@ -19,6 +22,7 @@ body {
     max-height: 100%;
 }
 
+/* Container para título e subtítulo */
 .titulo-subtitulo-container {
     position: absolute;
     top: 1px;
@@ -31,17 +35,20 @@ body {
     z-index: 1;
 }
 
+/* Estilo do título */
 .card .titulo {
     font-size: 8px;
     font-weight: bold;
     height: 11px;
 }
 
+/* Estilo do subtítulo */
 .card .subtitulo {
     font-size: 6px;
     height: 9px;
 }
 
+/* Container para o custo */
 .custo-container {
     position: absolute;
     top: 1px;
@@ -57,11 +64,13 @@ body {
     z-index: 2; /* Adicionado z-index maior */
 }
 
+/* Estilo do custo */
 .card .custo {
     font-size: 12px;
     font-weight: bold;
 }
 
+/* Estilo da ilustração */
 .card .ilustracao {
     position: absolute;
     top: 21px; /* Topo da ilustração */
@@ -73,6 +82,7 @@ body {
     background-position: center;
 }
 
+/* Estilo dos atributos */
 .card .atributos {
     position: absolute;
     top: 34px;
@@ -83,6 +93,7 @@ body {
     line-height: 2;
 }
 
+/* Estilo de cada atributo */
 .atributo {
     width: auto; /* Permite que a largura se ajuste ao conteúdo */
     min-width: 15px; /* Define a largura mínima */
@@ -100,11 +111,13 @@ body {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
 }
 
+/* Estilo do símbolo do atributo */
 .atributo .simbolo {
     font-size: 6px; /* Tamanho do simbolo */
     margin-left: 2px; /* Adicionado espaçamento entre valor e símbolo */
 }
 
+/* Estilo do tipo da carta */
 .card .tipo {
     position: absolute;
     top: 105px;
@@ -118,6 +131,7 @@ body {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75); /* Sombra */
 }
 
+/* Estilo do container de texto e lore */
 .card .texto-lore-container {
     position: absolute;
     top: 125px; 
@@ -131,18 +145,21 @@ body {
     flex-direction: column;
 }
 
+/* Estilo do texto */
 .card .texto {
     font-size: 9px;
     text-align: justify;
     margin-bottom: 5px; /* Espaço entre texto e lore */
 }
 
+/* Estilo do lore */
 .card .lore {
     font-size: 5px;
     font-style: italic;
     text-align: center;
 }
 
+/* Container para o ID */
 .card .id-container {
     position: absolute;
     bottom: 1px;
@@ -153,6 +170,7 @@ body {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
 }
 
+/* Estilo do ID */
 .card .id {
     font-size: 5px;
     text-align: right;
