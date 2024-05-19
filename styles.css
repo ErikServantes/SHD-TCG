@@ -1,5 +1,5 @@
 :root {
-    --card-height: 200px;
+    --card-height: 400px;
     --card-width: calc(var(--card-height) * 0.685);
     --custo-size: calc(var(--card-height) * 0.09);
     --custo-font-size: calc(var(--card-height) * 0.06);
