@@ -62,7 +62,7 @@ body {
     font-weight: bold;
 }
 
-/*.card .ilustracao {
+.card .ilustracao {
     position: absolute;
     top: 21px; /* Topo da ilustração */
     left: 0px;
@@ -71,21 +71,6 @@ body {
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
-}*/
-
-.card .ilustracao {
-    position: absolute;
-    top: 21px; /* Topo da ilustração */
-    left: 10px; /* Ajustar para deixar espaço para a borda */
-    width: calc(100% - 20px); /* Ajustar para deixar espaço para a borda */
-    height: 90px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 2px solid #fff; /* Borda branca para parecer embutida */
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra interna para profundidade */
-    border-radius: 5px; /* Bordas arredondadas */
-}
 
 .card .atributos {
     position: absolute;
