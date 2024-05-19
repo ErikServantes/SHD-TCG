@@ -1,23 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Fetch para obter o arquivo CSV
     fetch('cards.csv')
         .then(response => {
-            // Verifica se a resposta foi bem-sucedida
             if (!response.ok) {
                 throw new Error('Network response was not ok: ' + response.statusText);
             }
             return response.text();
         })
         .then(data => {
-            // Divide o CSV em linhas e ignora o cabeçalho
             const rows = data.split('\n').slice(1);
             const container = document.getElementById('card-container');
             rows.forEach(row => {
-                // Processa apenas linhas não vazias
                 if (row.trim() !== '') {
                     const columns = row.split(',');
-                    // Verifica se a linha tem 12 colunas
-                    if (columns.length === 12) {
+                    if (columns.length === 12) { // Verifica se a linha tem o número correto de colunas
                         const card = createCard(columns);
                         container.appendChild(card);
                     }
@@ -29,17 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 });
 
-// Função para criar uma carta a partir dos dados
 function createCard(data) {
-    const imagePath = `images/${data[3].trim()}.png`; // Caminho da imagem da carta
-    const illustrationPath = `images/${data[10].trim()}.png`; // Caminho da ilustração
-    const card = document.createElement('div'); // Cria um elemento div para a carta
-    card.className = 'card'; // Adiciona a classe 'card' ao elemento
-    card.style.backgroundImage = `url('${imagePath}')`; // Define a imagem de fundo da carta
+    const imagePath = `images/${data[3].trim()}.png`;
+    const illustrationPath = `images/${data[10].trim()}.png`;
 
-    const rarityColor = getColorByRarity(data[11].trim()); // Obtém a cor da raridade
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.style.backgroundImage = `url('${imagePath}')`;
 
-    // Define o conteúdo HTML da carta
+    const rarityColor = getColorByRarity(data[11].trim());
+
     card.innerHTML = `
         <div class="custo-container">
             <div class="custo">${data[0].trim()}</div>
@@ -70,19 +64,18 @@ function createCard(data) {
         </div>
     `;
 
-    return card; // Retorna o elemento da carta
+    return card;
 }
 
-// Função para obter a cor baseada na raridade
 function getColorByRarity(rarity) {
     switch(rarity) {
         case 'R':
-            return 'gold'; // Raridade R -> cor dourada
+            return 'gold';
         case 'I':
-            return 'silver'; // Raridade I -> cor prateada
+            return 'silver';
         case 'C':
-            return 'white'; // Raridade C -> cor branca
+            return 'white';
         default:
-            return 'black'; // Default -> cor preta
+            return 'black';
     }
 }
