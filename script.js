@@ -2,7 +2,7 @@ function createCard(data) {
     const imagePath = `images/${data[3].trim()}.png`;
     const illustrationPath = `images/${data[10].trim()}.png`;
     const culture = data[12].trim(); // Assuming the culture is in the 13th column
-    const logoPath = `images/${data[3].trim()}logo.png`; // Path to the dynamic logo image
+    const logoPath = `images/${data[4].trim()}logo.png`; // Path to the dynamic logo image
 
     const card = document.createElement('div');
     card.className = 'card';
