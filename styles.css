@@ -27,7 +27,7 @@ body {
 .card {
     width: var(--card-width);
     height: var(--card-height);
-    border: calc(var(--card-height) * 5/200)px solid #000;
+    border: 5px solid #000;
     margin: 10px;
     position: relative;
     background-size: cover;
