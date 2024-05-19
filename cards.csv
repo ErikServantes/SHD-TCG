@@ -1,101 +1,101 @@
 Custo,Título,Subtítulo,Cultura,Força,Agilidade,Vitalidade,Tipo,Texto,Lore,ID,Raridade
-1,Guerreiro de Anuviah,Defensor de Anuviah,Anuviah,5,3,4,Personagem,Um guerreiro corajoso que protege Anuviah,Ele lutou em muitas batalhas,1,R
-2,Feiticeiro de Sumyr,Mestre das Sombras,Sumyr,4,2,3,Personagem,Um poderoso feiticeiro de Sumyr,Seus feitiços são temidos por todos,2,I
-3,Guardião de Esterbalium,Escudo Humano,Esterbalium,3,5,3,Personagem,Protetor fiel de Esterbalium,Sempre vigilante e corajoso,3,C
-4,Explorador de Noman,Descobridor,Noman,2,5,2,Personagem,Um explorador habilidoso de Noman,Conhecido por sua agilidade e furtividade,4,R
-5,Sacerdote de Kashneb,Cura Divina,Kashneb,3,3,4,Personagem,Um sacerdote devoto de Kashneb,Suas preces trazem paz,5,I
-6,Assassino de Thally,Matador Silencioso,Thally,6,4,2,Personagem,Um assassino mortal de Thally,Ataca das sombras,6,C
-7,Bruxo de Wasting,Mago das Trevas,Wasting,4,2,4,Personagem,Um bruxo com poderes sombrios de Wasting,Sua magia corrompe,7,R
-8,Fera de Murier,Criatura Selvagem,Murier,7,3,3,Personagem,Uma fera temível de Murier,Ele percorre as terras selvagens,8,I
-9,Arqueiro de Anuviah,Atirador de Elite,Anuviah,3,5,2,Personagem,Um arqueiro habilidoso de Anuviah,Sua mira é precisa,9,C
-10,Mago de Sumyr,Lançador de Feitiços,Sumyr,5,3,2,Personagem,Um mago sábio de Sumyr,Seus feitiços entrelaçam o tempo,10,R
-1,Paladino de Esterbalium,Cavaleiro Sagrado,Esterbalium,4,2,5,Personagem,Um cavaleiro sagrado de Esterbalium,Defensor dos fracos,11,I
-2,Ranger de Noman,Guia Selvagem,Noman,2,5,3,Personagem,Um ranger especialista em sobrevivência na selva,Seus sentidos são aguçados,12,C
-3,Xamã de Kashneb,Guia Espiritual,Kashneb,3,4,2,Personagem,Um guia espiritual de Kashneb,Sua sabedoria é vasta,13,R
-4,Ladino de Thally,Ladrão Ágil,Thally,5,5,1,Personagem,Um ladino astuto de Thally,Ele pode roubar qualquer coisa,14,I
-5,Necromante de Wasting,Comandante dos Mortos,Wasting,4,1,4,Personagem,Um necromante que comanda os mortos de Wasting,Sua legião é vasta,15,C
-6,Caçador de Murier,Mestre das Feras,Murier,6,2,3,Personagem,Um caçador que doma as feras de Murier,Suas habilidades são incomparáveis,16,R
-7,Guardião de Anuviah,Protetor de Anuviah,Anuviah,4,2,4,Personagem,Um guardião de Anuviah,Ele protege o reino,17,I
-8,Encantador de Sumyr,Ilusionista,Sumyr,3,4,2,Personagem,Um encantador de Sumyr,Suas ilusões enganam todos,18,C
-9,Sentinela de Esterbalium,Observador Vigilante,Esterbalium,2,2,5,Personagem,Um sentinela vigilante de Esterbalium,Ele vigia as terras,19,R
-10,Nômade de Noman,Viajante,Noman,3,5,2,Personagem,Um nômade de Noman,Sempre em movimento,20,I
-1,Clérigo de Kashneb,Cura Sagrada,Kashneb,3,3,3,Personagem,Um clérigo de Kashneb,Suas habilidades de cura são fortes,21,C
-2,Espião de Thally,Infiltrador,Thally,5,4,2,Personagem,Um espião de Thally,Ele coleta segredos,22,R
-3,Bruxa de Wasting,Feiticeira Sombria,Wasting,4,2,3,Personagem,Uma bruxa de Wasting,Seus feitiços trazem desespero,23,I
-4,Lobo de Murier,Fera Selvagem,Murier,6,2,3,Personagem,Um lobo selvagem de Murier,Feroz e leal,24,C
-5,Herói de Anuviah,Salvador de Anuviah,Anuviah,5,3,4,Personagem,Um herói de Anuviah,Corajoso e verdadeiro,25,R
-6,Alquimista de Sumyr,Mestre de Poções,Sumyr,3,4,2,Personagem,Um alquimista de Sumyr,Suas poções são poderosas,26,I
-7,Defensor de Esterbalium,Portador do Escudo,Esterbalium,4,1,5,Personagem,Um defensor de Esterbalium,Ele mantém a linha,27,C
-8,Explorador de Noman,Aventureiro,Noman,2,5,3,Personagem,Um explorador de Noman,Sempre em busca de novas terras,28,R
-9,Sábio de Kashneb,Sábio Antigo,Kashneb,3,4,2,Personagem,Um sábio de Kashneb,Seu conhecimento é imenso,29,I
-10,Bandido de Thally,Fora da Lei,Thally,5,5,1,Personagem,Um bandido de Thally,Ele vive fora da lei,30,C
-1,Ceifador de Wasting,Portador da Morte,Wasting,6,2,3,Personagem,Um ceifador de Wasting,Portador da morte,31,R
-2,Leão de Murier,Rei das Feras,Murier,7,1,4,Personagem,Um leão de Murier,Rei das terras selvagens,32,I
-3,Druida de Anuviah,Amigo da Natureza,Anuviah,3,5,2,Personagem,Um druida de Anuviah,Protetor da natureza,33,C
-4,Invocador de Sumyr,Mestre Elemental,Sumyr,5,3,2,Personagem,Um invocador de Sumyr,Mestre dos elementos,34,R
-5,Cruzado de Esterbalium,Guerreiro Sagrado,Esterbalium,4,2,5,Personagem,Um cruzado de Esterbalium,Lutador contra o mal,35,I
-6,Buscador de Noman,Procurador da Verdade,Noman,2,5,3,Personagem,Um buscador de Noman,Sempre em busca da verdade,36,C
-7,Oráculo de Kashneb,Profeta,Kashneb,3,4,2,Personagem,Um oráculo de Kashneb,Vidente do futuro,37,R
-8,Ladrão de Thally,Sombra de Thally,Thally,5,5,1,Personagem,Um ladrão de Thally,Mestre das sombras,38,I
-9,Feiticeira de Wasting,Sacerdotisa Sombria,Wasting,4,2,3,Personagem,Uma feiticeira de Wasting,Sua magia é poderosa,39,C
-10,Dragão de Murier,Fera Mítica,Murier,8,1,5,Personagem,Um dragão mítico de Murier,Feroz e poderoso,40,R
-1,Guardião de Anuviah,Defensor da Terra,Anuviah,4,2,4,Personagem,Um guardião de Anuviah,Ele protege o reino,41,I
-2,Encantador de Sumyr,Ilusionista Mestre,Sumyr,3,4,2,Personagem,Um encantador de Sumyr,Suas ilusões enganam todos,42,C
-3,Sentinela de Esterbalium,Vigilante,Esterbalium,2,2,5,Personagem,Um sentinela vigilante de Esterbalium,Ele vigia as terras,43,R
-4,Nômade de Noman,Andarilho,Noman,3,5,2,Personagem,Um nômade de Noman,Sempre em movimento,44,I
-5,Curandeiro de Kashneb,Cura Espiritual,Kashneb,3,3,3,Personagem,Um curandeiro de Kashneb,Suas habilidades de cura são fortes,45,C
-6,Espadachim de Thally,Mestre das Lâminas,Thally,5,2,4,Personagem,Um espadachim de Thally,Mestre das lâminas,46,R
-7,Invocador de Wasting,Chamador das Trevas,Wasting,4,3,2,Personagem,Um invocador de Wasting,Ele chama as trevas,47,I
-8,Urso de Murier,Grande Fera,Murier,6,2,4,Personagem,Um urso de Murier,Feroz e imponente,48,C
-9,Campeão de Anuviah,Herói de Anuviah,Anuviah,5,3,4,Personagem,Um campeão de Anuviah,Corajoso e verdadeiro,49,R
-10,Alquimista de Sumyr,Mestre das Poções,Sumyr,3,4,2,Personagem,Um alquimista de Sumyr,Suas poções são poderosas,50,I
-1,Defensor de Esterbalium,Protetor do Povo,Esterbalium,4,1,5,Personagem,Um defensor de Esterbalium,Ele mantém a linha,51,C
-2,Explorador de Noman,Descobridor,Noman,2,5,3,Personagem,Um explorador de Noman,Sempre em busca de novas terras,52,R
-3,Sábio de Kashneb,Guardião do Conhecimento,Kashneb,3,4,2,Personagem,Um sábio de Kashneb,Seu conhecimento é imenso,53,I
-4,Bandido de Thally,Fugitivo,Thally,5,5,1,Personagem,Um bandido de Thally,Ele vive fora da lei,54,C
-5,Cavaleiro de Wasting,Guerreiro Sombrio,Wasting,6,2,3,Personagem,Um cavaleiro de Wasting,Portador da morte,55,R
-6,Leão de Murier,Senhor das Feras,Murier,7,1,4,Personagem,Um leão de Murier,Rei das terras selvagens,56,I
-7,Druida de Anuviah,Protetor da Natureza,Anuviah,3,5,2,Personagem,Um druida de Anuviah,Protetor da natureza,57,C
-8,Invocador de Sumyr,Conjurador dos Elementos,Sumyr,5,3,2,Personagem,Um invocador de Sumyr,Mestre dos elementos,58,R
-9,Cruzado de Esterbalium,Paladino,Esterbalium,4,2,5,Personagem,Um cruzado de Esterbalium,Lutador contra o mal,59,I
-10,Procurador de Noman,Buscador,Noman,2,5,3,Personagem,Um procurador de Noman,Sempre em busca da verdade,60,C
-1,Profeta de Kashneb,Oráculo,Kashneb,3,4,2,Personagem,Um profeta de Kashneb,Vidente do futuro,61,R
-2,Ladrão de Thally,Sombrio,Thally,5,5,1,Personagem,Um ladrão de Thally,Mestre das sombras,62,I
-3,Sacerdotisa de Wasting,Feiticeira,Wasting,4,2,3,Personagem,Uma sacerdotisa de Wasting,Sua magia é poderosa,63,C
-4,Fênix de Murier,Pássaro de Fogo,Murier,8,1,4,Personagem,Uma fênix de Murier,Renascida das cinzas,64,R
-5,Guardião de Anuviah,Defensor de Anuviah,Anuviah,4,2,4,Personagem,Um guardião de Anuviah,Ele protege o reino,65,I
-6,Ilusionista de Sumyr,Manipulador,Sumyr,3,4,2,Personagem,Um ilusionista de Sumyr,Suas ilusões enganam todos,66,C
-7,Vigilante de Esterbalium,Sentinela,Esterbalium,2,2,5,Personagem,Um vigilante de Esterbalium,Ele vigia as terras,67,R
-8,Viajante de Noman,Explorador,Noman,3,5,2,Personagem,Um viajante de Noman,Sempre em movimento,68,I
-9,Curandeiro de Kashneb,Médico Espiritual,Kashneb,3,3,3,Personagem,Um curandeiro de Kashneb,Suas habilidades de cura são fortes,69,C
-10,Gladiador de Thally,Guerreiro,Thally,5,2,4,Personagem,Um gladiador de Thally,Mestre das lâminas,70,R
-1,Chamador de Wasting,Summoner,Wasting,4,3,2,Personagem,Um chamador de Wasting,Ele chama as trevas,71,I
-2,Grifo de Murier,Guardião do Céu,Murier,6,2,4,Personagem,Um grifo de Murier,Feroz e imponente,72,C
-3,Herói de Anuviah,Campeão,Anuviah,5,3,4,Personagem,Um herói de Anuviah,Corajoso e verdadeiro,73,R
-4,Potion Master de Sumyr,Alquimista,Sumyr,3,4,2,Personagem,Um potion master de Sumyr,Suas poções são poderosas,74,I
-5,Protetor de Esterbalium,Defensor,Esterbalium,4,1,5,Personagem,Um protetor de Esterbalium,Ele mantém a linha,75,C
-6,Aventureiro de Noman,Explorador,Noman,2,5,3,Personagem,Um aventureiro de Noman,Sempre em busca de novas terras,76,R
-7,Guia de Kashneb,Sábio,Kashneb,3,4,2,Personagem,Um guia de Kashneb,Seu conhecimento é imenso,77,I
-8,Fugitivo de Thally,Fora da Lei,Thally,5,5,1,Personagem,Um fugitivo de Thally,Ele vive fora da lei,78,C
-9,Cavaleiro de Wasting,Paladino,Wasting,6,2,3,Personagem,Um cavaleiro de Wasting,Portador da morte,79,R
-10,Senhor das Feras de Murier,Leão,Murier,7,1,4,Personagem,Um senhor das feras de Murier,Rei das terras selvagens,80,I
-1,Guardião da Natureza de Anuviah,Druida,Anuviah,3,5,2,Personagem,Um guardião da natureza de Anuviah,Protetor da natureza,81,C
-2,Conjurador dos Elementos de Sumyr,Invocador,Sumyr,5,3,2,Personagem,Um conjurador dos elementos de Sumyr,Mestre dos elementos,82,R
-3,Paladino de Esterbalium,Cruzado,Esterbalium,4,2,5,Personagem,Um paladino de Esterbalium,Lutador contra o mal,83,I
-4,Procurador da Verdade de Noman,Buscador,Noman,2,5,3,Personagem,Um procurador da verdade de Noman,Sempre em busca da verdade,84,C
-5,Oráculo de Kashneb,Profeta,Kashneb,3,4,2,Personagem,Um oráculo de Kashneb,Vidente do futuro,85,R
-6,Sombra de Thally,Ladrão,Thally,5,5,1,Personagem,Uma sombra de Thally,Mestre das sombras,86,I
-7,Feiticeira Sombria de Wasting,Sacerdotisa,Wasting,4,2,3,Personagem,Uma feiticeira sombria de Wasting,Sua magia é poderosa,87,C
-8,Fênix Renascida de Murier,Pássaro de Fogo,Murier,8,1,4,Personagem,Uma fênix renascida de Murier,Renascida das cinzas,88,R
-9,Guardião Defensor de Anuviah,Guardião,Anuviah,4,2,4,Personagem,Um guardião defensor de Anuviah,Ele protege o reino,89,I
-10,Ilusionista Mestre de Sumyr,Encantador,Sumyr,3,4,2,Personagem,Um ilusionista mestre de Sumyr,Suas ilusões enganam todos,90,C
-1,Vigilante Sentinela de Esterbalium,Sentinela,Esterbalium,2,2,5,Personagem,Um vigilante sentinela de Esterbalium,Ele vigia as terras,91,R
-2,Viajante Andarilho de Noman,Nômade,Noman,3,5,2,Personagem,Um viajante andarilho de Noman,Sempre em movimento,92,I
-3,Médico Espiritual de Kashneb,Curandeiro,Kashneb,3,3,3,Personagem,Um médico espiritual de Kashneb,Suas habilidades de cura são fortes,93,C
-4,Gladiador Mestre de Thally,Guerreiro,Thally,5,2,4,Personagem,Um gladiador mestre de Thally,Mestre das lâminas,94,R
-5,Summoner das Trevas de Wasting,Chamador,Wasting,4,3,2,Personagem,Um summoner das trevas de Wasting,Ele chama as trevas,95,I
-6,Guardião do Céu de Murier,Grifo,Murier,6,2,4,Personagem,Um guardião do céu de Murier,Feroz e imponente,96,C
-7,Campeão Salvador de Anuviah,Herói,Anuviah,5,3,4,Personagem,Um campeão salvador de Anuviah,Corajoso e verdadeiro,97,R
-8,Alquimista Mestre de Sumyr,Potion Master,Sumyr,3,4,2,Personagem,Um alquimista mestre de Sumyr,Suas poções são poderosas,98,I
-9,Protetor do Povo de Esterbalium,Defensor,Esterbalium,4,1,5,Personagem,Um protetor do povo de Esterbalium,Ele mantém a linha,99,C
-10,Aventureiro Descobridor de Noman,Explorador,Noman,2,5,3,Personagem,Um aventureiro descobridor de Noman,Sempre em busca de novas terras,100,R
+1,Guerreiro de Anuviah,Defensor de Anuviah,Anuviah,5,3,4,Personagem,Um guerreiro corajoso que protege Anuviah,Ele lutou em muitas batalhas,001,R
+2,Feiticeiro de Sumyr,Mestre das Sombras,Sumyr,4,2,3,Personagem,Um poderoso feiticeiro de Sumyr,Seus feitiços são temidos por todos,002,I
+3,Guardião de Esterbalium,Escudo Humano,Esterbalium,3,5,3,Personagem,Protetor fiel de Esterbalium,Sempre vigilante e corajoso,003,C
+4,Explorador de Noman,Descobridor,Noman,2,5,2,Personagem,Um explorador habilidoso de Noman,Conhecido por sua agilidade e furtividade,004,R
+5,Sacerdote de Kashneb,Cura Divina,Kashneb,3,3,4,Personagem,Um sacerdote devoto de Kashneb,Suas preces trazem paz,005,I
+6,Assassino de Thally,Matador Silencioso,Thally,6,4,2,Personagem,Um assassino mortal de Thally,Ataca das sombras,006,C
+7,Bruxo de Wasting,Mago das Trevas,Wasting,4,2,4,Personagem,Um bruxo com poderes sombrios de Wasting,Sua magia corrompe,007,R
+8,Fera de Murier,Criatura Selvagem,Murier,7,3,3,Personagem,Uma fera temível de Murier,Ele percorre as terras selvagens,008,I
+9,Arqueiro de Anuviah,Atirador de Elite,Anuviah,3,5,2,Personagem,Um arqueiro habilidoso de Anuviah,Sua mira é precisa,009,C
+10,Mago de Sumyr,Lançador de Feitiços,Sumyr,5,3,2,Personagem,Um mago sábio de Sumyr,Seus feitiços entrelaçam o tempo,001,R
+1,Paladino de Esterbalium,Cavaleiro Sagrado,Esterbalium,4,2,5,Personagem,Um cavaleiro sagrado de Esterbalium,Defensor dos fracos,001,I
+2,Ranger de Noman,Guia Selvagem,Noman,2,5,3,Personagem,Um ranger especialista em sobrevivência na selva,Seus sentidos são aguçados,001,C
+3,Xamã de Kashneb,Guia Espiritual,Kashneb,3,4,2,Personagem,Um guia espiritual de Kashneb,Sua sabedoria é vasta,001,R
+4,Ladino de Thally,Ladrão Ágil,Thally,5,5,1,Personagem,Um ladino astuto de Thally,Ele pode roubar qualquer coisa,001,I
+5,Necromante de Wasting,Comandante dos Mortos,Wasting,4,1,4,Personagem,Um necromante que comanda os mortos de Wasting,Sua legião é vasta,001,C
+6,Caçador de Murier,Mestre das Feras,Murier,6,2,3,Personagem,Um caçador que doma as feras de Murier,Suas habilidades são incomparáveis,001,R
+7,Guardião de Anuviah,Protetor de Anuviah,Anuviah,4,2,4,Personagem,Um guardião de Anuviah,Ele protege o reino,001,I
+8,Encantador de Sumyr,Ilusionista,Sumyr,3,4,2,Personagem,Um encantador de Sumyr,Suas ilusões enganam todos,001,C
+9,Sentinela de Esterbalium,Observador Vigilante,Esterbalium,2,2,5,Personagem,Um sentinela vigilante de Esterbalium,Ele vigia as terras,001,R
+10,Nômade de Noman,Viajante,Noman,3,5,2,Personagem,Um nômade de Noman,Sempre em movimento,002,I
+1,Clérigo de Kashneb,Cura Sagrada,Kashneb,3,3,3,Personagem,Um clérigo de Kashneb,Suas habilidades de cura são fortes,002,C
+2,Espião de Thally,Infiltrador,Thally,5,4,2,Personagem,Um espião de Thally,Ele coleta segredos,002,R
+3,Bruxa de Wasting,Feiticeira Sombria,Wasting,4,2,3,Personagem,Uma bruxa de Wasting,Seus feitiços trazem desespero,002,I
+4,Lobo de Murier,Fera Selvagem,Murier,6,2,3,Personagem,Um lobo selvagem de Murier,Feroz e leal,002,C
+5,Herói de Anuviah,Salvador de Anuviah,Anuviah,5,3,4,Personagem,Um herói de Anuviah,Corajoso e verdadeiro,002,R
+6,Alquimista de Sumyr,Mestre de Poções,Sumyr,3,4,2,Personagem,Um alquimista de Sumyr,Suas poções são poderosas,002,I
+7,Defensor de Esterbalium,Portador do Escudo,Esterbalium,4,1,5,Personagem,Um defensor de Esterbalium,Ele mantém a linha,002,C
+8,Explorador de Noman,Aventureiro,Noman,2,5,3,Personagem,Um explorador de Noman,Sempre em busca de novas terras,002,R
+9,Sábio de Kashneb,Sábio Antigo,Kashneb,3,4,2,Personagem,Um sábio de Kashneb,Seu conhecimento é imenso,002,I
+10,Bandido de Thally,Fora da Lei,Thally,5,5,1,Personagem,Um bandido de Thally,Ele vive fora da lei,003,C
+1,Ceifador de Wasting,Portador da Morte,Wasting,6,2,3,Personagem,Um ceifador de Wasting,Portador da morte,003,R
+2,Leão de Murier,Rei das Feras,Murier,7,1,4,Personagem,Um leão de Murier,Rei das terras selvagens,003,I
+3,Druida de Anuviah,Amigo da Natureza,Anuviah,3,5,2,Personagem,Um druida de Anuviah,Protetor da natureza,003,C
+4,Invocador de Sumyr,Mestre Elemental,Sumyr,5,3,2,Personagem,Um invocador de Sumyr,Mestre dos elementos,003,R
+5,Cruzado de Esterbalium,Guerreiro Sagrado,Esterbalium,4,2,5,Personagem,Um cruzado de Esterbalium,Lutador contra o mal,003,I
+6,Buscador de Noman,Procurador da Verdade,Noman,2,5,3,Personagem,Um buscador de Noman,Sempre em busca da verdade,003,C
+7,Oráculo de Kashneb,Profeta,Kashneb,3,4,2,Personagem,Um oráculo de Kashneb,Vidente do futuro,003,R
+8,Ladrão de Thally,Sombra de Thally,Thally,5,5,1,Personagem,Um ladrão de Thally,Mestre das sombras,003,I
+9,Feiticeira de Wasting,Sacerdotisa Sombria,Wasting,4,2,3,Personagem,Uma feiticeira de Wasting,Sua magia é poderosa,003,C
+10,Dragão de Murier,Fera Mítica,Murier,8,1,5,Personagem,Um dragão mítico de Murier,Feroz e poderoso,004,R
+1,Guardião de Anuviah,Defensor da Terra,Anuviah,4,2,4,Personagem,Um guardião de Anuviah,Ele protege o reino,004,I
+2,Encantador de Sumyr,Ilusionista Mestre,Sumyr,3,4,2,Personagem,Um encantador de Sumyr,Suas ilusões enganam todos,004,C
+3,Sentinela de Esterbalium,Vigilante,Esterbalium,2,2,5,Personagem,Um sentinela vigilante de Esterbalium,Ele vigia as terras,004,R
+4,Nômade de Noman,Andarilho,Noman,3,5,2,Personagem,Um nômade de Noman,Sempre em movimento,004,I
+5,Curandeiro de Kashneb,Cura Espiritual,Kashneb,3,3,3,Personagem,Um curandeiro de Kashneb,Suas habilidades de cura são fortes,004,C
+6,Espadachim de Thally,Mestre das Lâminas,Thally,5,2,4,Personagem,Um espadachim de Thally,Mestre das lâminas,004,R
+7,Invocador de Wasting,Chamador das Trevas,Wasting,4,3,2,Personagem,Um invocador de Wasting,Ele chama as trevas,004,I
+8,Urso de Murier,Grande Fera,Murier,6,2,4,Personagem,Um urso de Murier,Feroz e imponente,004,C
+9,Campeão de Anuviah,Herói de Anuviah,Anuviah,5,3,4,Personagem,Um campeão de Anuviah,Corajoso e verdadeiro,004,R
+10,Alquimista de Sumyr,Mestre das Poções,Sumyr,3,4,2,Personagem,Um alquimista de Sumyr,Suas poções são poderosas,005,I
+1,Defensor de Esterbalium,Protetor do Povo,Esterbalium,4,1,5,Personagem,Um defensor de Esterbalium,Ele mantém a linha,005,C
+2,Explorador de Noman,Descobridor,Noman,2,5,3,Personagem,Um explorador de Noman,Sempre em busca de novas terras,005,R
+3,Sábio de Kashneb,Guardião do Conhecimento,Kashneb,3,4,2,Personagem,Um sábio de Kashneb,Seu conhecimento é imenso,005,I
+4,Bandido de Thally,Fugitivo,Thally,5,5,1,Personagem,Um bandido de Thally,Ele vive fora da lei,005,C
+5,Cavaleiro de Wasting,Guerreiro Sombrio,Wasting,6,2,3,Personagem,Um cavaleiro de Wasting,Portador da morte,005,R
+6,Leão de Murier,Senhor das Feras,Murier,7,1,4,Personagem,Um leão de Murier,Rei das terras selvagens,005,I
+7,Druida de Anuviah,Protetor da Natureza,Anuviah,3,5,2,Personagem,Um druida de Anuviah,Protetor da natureza,005,C
+8,Invocador de Sumyr,Conjurador dos Elementos,Sumyr,5,3,2,Personagem,Um invocador de Sumyr,Mestre dos elementos,005,R
+9,Cruzado de Esterbalium,Paladino,Esterbalium,4,2,5,Personagem,Um cruzado de Esterbalium,Lutador contra o mal,005,I
+10,Procurador de Noman,Buscador,Noman,2,5,3,Personagem,Um procurador de Noman,Sempre em busca da verdade,006,C
+1,Profeta de Kashneb,Oráculo,Kashneb,3,4,2,Personagem,Um profeta de Kashneb,Vidente do futuro,006,R
+2,Ladrão de Thally,Sombrio,Thally,5,5,1,Personagem,Um ladrão de Thally,Mestre das sombras,006,I
+3,Sacerdotisa de Wasting,Feiticeira,Wasting,4,2,3,Personagem,Uma sacerdotisa de Wasting,Sua magia é poderosa,006,C
+4,Fênix de Murier,Pássaro de Fogo,Murier,8,1,4,Personagem,Uma fênix de Murier,Renascida das cinzas,006,R
+5,Guardião de Anuviah,Defensor de Anuviah,Anuviah,4,2,4,Personagem,Um guardião de Anuviah,Ele protege o reino,006,I
+6,Ilusionista de Sumyr,Manipulador,Sumyr,3,4,2,Personagem,Um ilusionista de Sumyr,Suas ilusões enganam todos,006,C
+7,Vigilante de Esterbalium,Sentinela,Esterbalium,2,2,5,Personagem,Um vigilante de Esterbalium,Ele vigia as terras,006,R
+8,Viajante de Noman,Explorador,Noman,3,5,2,Personagem,Um viajante de Noman,Sempre em movimento,006,I
+9,Curandeiro de Kashneb,Médico Espiritual,Kashneb,3,3,3,Personagem,Um curandeiro de Kashneb,Suas habilidades de cura são fortes,006,C
+10,Gladiador de Thally,Guerreiro,Thally,5,2,4,Personagem,Um gladiador de Thally,Mestre das lâminas,007,R
+1,Chamador de Wasting,Summoner,Wasting,4,3,2,Personagem,Um chamador de Wasting,Ele chama as trevas,007,I
+2,Grifo de Murier,Guardião do Céu,Murier,6,2,4,Personagem,Um grifo de Murier,Feroz e imponente,007,C
+3,Herói de Anuviah,Campeão,Anuviah,5,3,4,Personagem,Um herói de Anuviah,Corajoso e verdadeiro,007,R
+4,Potion Master de Sumyr,Alquimista,Sumyr,3,4,2,Personagem,Um potion master de Sumyr,Suas poções são poderosas,007,I
+5,Protetor de Esterbalium,Defensor,Esterbalium,4,1,5,Personagem,Um protetor de Esterbalium,Ele mantém a linha,007,C
+6,Aventureiro de Noman,Explorador,Noman,2,5,3,Personagem,Um aventureiro de Noman,Sempre em busca de novas terras,007,R
+7,Guia de Kashneb,Sábio,Kashneb,3,4,2,Personagem,Um guia de Kashneb,Seu conhecimento é imenso,007,I
+8,Fugitivo de Thally,Fora da Lei,Thally,5,5,1,Personagem,Um fugitivo de Thally,Ele vive fora da lei,007,C
+9,Cavaleiro de Wasting,Paladino,Wasting,6,2,3,Personagem,Um cavaleiro de Wasting,Portador da morte,007,R
+10,Senhor das Feras de Murier,Leão,Murier,7,1,4,Personagem,Um senhor das feras de Murier,Rei das terras selvagens,008,I
+1,Guardião da Natureza de Anuviah,Druida,Anuviah,3,5,2,Personagem,Um guardião da natureza de Anuviah,Protetor da natureza,008,C
+2,Conjurador dos Elementos de Sumyr,Invocador,Sumyr,5,3,2,Personagem,Um conjurador dos elementos de Sumyr,Mestre dos elementos,008,R
+3,Paladino de Esterbalium,Cruzado,Esterbalium,4,2,5,Personagem,Um paladino de Esterbalium,Lutador contra o mal,008,I
+4,Procurador da Verdade de Noman,Buscador,Noman,2,5,3,Personagem,Um procurador da verdade de Noman,Sempre em busca da verdade,008,C
+5,Oráculo de Kashneb,Profeta,Kashneb,3,4,2,Personagem,Um oráculo de Kashneb,Vidente do futuro,008,R
+6,Sombra de Thally,Ladrão,Thally,5,5,1,Personagem,Uma sombra de Thally,Mestre das sombras,008,I
+7,Feiticeira Sombria de Wasting,Sacerdotisa,Wasting,4,2,3,Personagem,Uma feiticeira sombria de Wasting,Sua magia é poderosa,008,C
+8,Fênix Renascida de Murier,Pássaro de Fogo,Murier,8,1,4,Personagem,Uma fênix renascida de Murier,Renascida das cinzas,008,R
+9,Guardião Defensor de Anuviah,Guardião,Anuviah,4,2,4,Personagem,Um guardião defensor de Anuviah,Ele protege o reino,008,I
+10,Ilusionista Mestre de Sumyr,Encantador,Sumyr,3,4,2,Personagem,Um ilusionista mestre de Sumyr,Suas ilusões enganam todos,009,C
+1,Vigilante Sentinela de Esterbalium,Sentinela,Esterbalium,2,2,5,Personagem,Um vigilante sentinela de Esterbalium,Ele vigia as terras,009,R
+2,Viajante Andarilho de Noman,Nômade,Noman,3,5,2,Personagem,Um viajante andarilho de Noman,Sempre em movimento,009,I
+3,Médico Espiritual de Kashneb,Curandeiro,Kashneb,3,3,3,Personagem,Um médico espiritual de Kashneb,Suas habilidades de cura são fortes,009,C
+4,Gladiador Mestre de Thally,Guerreiro,Thally,5,2,4,Personagem,Um gladiador mestre de Thally,Mestre das lâminas,009,R
+5,Summoner das Trevas de Wasting,Chamador,Wasting,4,3,2,Personagem,Um summoner das trevas de Wasting,Ele chama as trevas,009,I
+6,Guardião do Céu de Murier,Grifo,Murier,6,2,4,Personagem,Um guardião do céu de Murier,Feroz e imponente,009,C
+7,Campeão Salvador de Anuviah,Herói,Anuviah,5,3,4,Personagem,Um campeão salvador de Anuviah,Corajoso e verdadeiro,009,R
+8,Alquimista Mestre de Sumyr,Potion Master,Sumyr,3,4,2,Personagem,Um alquimista mestre de Sumyr,Suas poções são poderosas,009,I
+9,Protetor do Povo de Esterbalium,Defensor,Esterbalium,4,1,5,Personagem,Um protetor do povo de Esterbalium,Ele mantém a linha,009,C
+10,Aventureiro Descobridor de Noman,Explorador,Noman,2,5,3,Personagem,Um aventureiro descobridor de Noman,Sempre em busca de novas terras,001,R
