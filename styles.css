@@ -1,4 +1,4 @@
-body {
+/*body {
     font-family: Arial, sans-serif;
 }
 
@@ -51,10 +51,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 1); /* Caixa semi-transparente */
-    border-radius: 50%; /* Faz o container ser circular */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
-    z-index: 2; /* Adicionado z-index maior */
+    background-color: rgba(255, 255, 255, 1); 
+    border-radius: 50%; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
 .card .custo {
@@ -64,7 +64,7 @@ body {
 
 .card .ilustracao {
     position: absolute;
-    top: 21px; /* Topo da ilustração */
+    top: 21px;
     left: 0px;
     width: 100%;
     height: 90px; 
@@ -84,25 +84,25 @@ body {
 }
 
 .atributo {
-    width: auto; /* Permite que a largura se ajuste ao conteúdo */
-    min-width: 15px; /* Define a largura mínima */
+    width: auto;
+    min-width: 15px;
     height: 18px;
     margin-bottom: 2px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 8px; /* Tamanho da fonte do valor */
+    font-size: 8px;
     font-weight: bold;
     color: black;
-    text-align: right; /* Alinha o texto à direita */
-    padding: 0 2px; /* Adicionado espaçamento entre o texto e a borda */
+    text-align: right;
+    padding: 0 2px;
     background-color: rgba(217, 203, 128, 0.9);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .atributo .simbolo {
-    font-size: 6px; /* Tamanho do simbolo */
-    margin-left: 2px; /* Adicionado espaçamento entre valor e símbolo */
+    font-size: 6px;
+    margin-left: 2px;
 }
 
 .card .tipo {
@@ -115,7 +115,7 @@ body {
     text-align: center;
     padding: 2px 0px;
     background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75); /* Sombra */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
 }
 
 .card .texto-lore-container {
@@ -124,7 +124,7 @@ body {
     left: 0px;
     right: 0px;
     bottom: 12px;
-    background-color: rgba(255, 255, 255, 0.7); /* Caixa semi-transparente */
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 5px 10px;
     border-radius: 3px;
     display: flex;
@@ -134,7 +134,7 @@ body {
 .card .texto {
     font-size: 9px;
     text-align: justify;
-    margin-bottom: 5px; /* Espaço entre texto e lore */
+    margin-bottom: 5px;
 }
 
 .card .lore {
@@ -150,12 +150,95 @@ body {
     left: 120px;
     padding: 1px 4px;
     border-radius: 1px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .card .id {
     font-size: 5px;
     text-align: right;
     font-weight: bold;
-    color: black; /* Define a cor do texto como preto */
+    color: black;
+}*/
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('cards.csv')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok: ' + response.statusText);
+            }
+            return response.text();
+        })
+        .then(data => {
+            const rows = data.split('\n').slice(1);
+            const container = document.getElementById('card-container');
+            rows.forEach(row => {
+                if (row.trim() !== '') {
+                    const columns = row.split(',');
+                    if (columns.length === 12) { // Verifica se a linha tem o número correto de colunas
+                        const card = createCard(columns);
+                        container.appendChild(card);
+                    }
+                }
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching or processing the CSV file:', error);
+        });
+});
+
+function createCard(data) {
+    const imagePath = `images/${data[3].trim()}.png`;
+    const illustrationPath = `images/${data[10].trim()}.png`;
+
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.style.backgroundImage = `url('${imagePath}')`;
+
+    const rarityColor = getColorByRarity(data[11].trim());
+
+    card.innerHTML = `
+        <div class="custo-container">
+            <div class="custo">${data[0].trim()}</div>
+        </div>
+        <div class="titulo-subtitulo-container">
+            <div class="titulo">${data[1].trim()}</div>
+            <div class="subtitulo">${data[2].trim()}</div>
+        </div>
+        <div class="ilustracao" style="background-image: url('${illustrationPath}');"></div>
+        <div class="atributos">
+            <div class="atributo" style="background-color: rgba(217, 203, 128, 0.9);">
+                ${data[4].trim()} <span class="simbolo">&#9876;</span>
+            </div>
+            <div class="atributo" style="background-color: rgba(217, 203, 128, 0.9);">
+                ${data[5].trim()} <span class="simbolo">&#9829;</span>
+            </div>
+            <div class="atributo" style="background-color: rgba(217, 203, 128, 0.9);">
+                ${data[6].trim()} <span class="simbolo">&#x3df;</span>
+            </div>
+        </div>
+        <div class="tipo">${data[7].trim()}</div>
+        <div class="texto-lore-container">
+            <div class="texto">${data[8].trim()}</div>
+            <div class="lore">${data[9].trim()}</div>
+        </div>
+        <div class="id-container" style="background-color: ${rarityColor};">
+            <div class="id">${data[10].trim()}</div>
+        </div>
+    `;
+
+    return card;
+}
+
+function getColorByRarity(rarity) {
+    switch(rarity) {
+        case 'R':
+            return 'gold';
+        case 'I':
+            return 'silver';
+        case 'C':
+            return 'white';
+        default:
+            return 'black';
+    }
 }
