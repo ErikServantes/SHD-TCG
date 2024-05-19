@@ -35,18 +35,21 @@ body {
 
 .card .titulo {
     font-size: 8px;
+    left: 15px;
     font-weight: bold;
     height: 11px;
 }
 
 .card .subtitulo {
     font-size: 6px;
+    left: 15px;
     height: 9px;
 }
 
 .logo {
-    height: 10px; /* Ajuste conforme necessário */
+    height: 18px; /* Ajuste conforme necessário */
     width: auto;
+    right: 1px;
 }
 
 .custo-container {
