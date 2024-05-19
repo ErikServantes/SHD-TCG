@@ -161,84 +161,164 @@
 }*/
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('cards.csv')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok: ' + response.statusText);
-            }
-            return response.text();
-        })
-        .then(data => {
-            const rows = data.split('\n').slice(1);
-            const container = document.getElementById('card-container');
-            rows.forEach(row => {
-                if (row.trim() !== '') {
-                    const columns = row.split(',');
-                    if (columns.length === 12) { // Verifica se a linha tem o número correto de colunas
-                        const card = createCard(columns);
-                        container.appendChild(card);
-                    }
-                }
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching or processing the CSV file:', error);
-        });
-});
-
-function createCard(data) {
-    const imagePath = `images/${data[3].trim()}.png`;
-    const illustrationPath = `images/${data[10].trim()}.png`;
-
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.style.backgroundImage = `url('${imagePath}')`;
-
-    const rarityColor = getColorByRarity(data[11].trim());
-
-    card.innerHTML = `
-        <div class="custo-container">
-            <div class="custo">${data[0].trim()}</div>
-        </div>
-        <div class="titulo-subtitulo-container">
-            <div class="titulo">${data[1].trim()}</div>
-            <div class="subtitulo">${data[2].trim()}</div>
-        </div>
-        <div class="ilustracao" style="background-image: url('${illustrationPath}');"></div>
-        <div class="atributos">
-            <div class="atributo" style="background-color: rgba(217, 203, 128, 0.9);">
-                ${data[4].trim()} <span class="simbolo">&#9876;</span>
-            </div>
-            <div class="atributo" style="background-color: rgba(217, 203, 128, 0.9);">
-                ${data[5].trim()} <span class="simbolo">&#9829;</span>
-            </div>
-            <div class="atributo" style="background-color: rgba(217, 203, 128, 0.9);">
-                ${data[6].trim()} <span class="simbolo">&#x3df;</span>
-            </div>
-        </div>
-        <div class="tipo">${data[7].trim()}</div>
-        <div class="texto-lore-container">
-            <div class="texto">${data[8].trim()}</div>
-            <div class="lore">${data[9].trim()}</div>
-        </div>
-        <div class="id-container" style="background-color: ${rarityColor};">
-            <div class="id">${data[10].trim()}</div>
-        </div>
-    `;
-
-    return card;
+body {
+    font-family: Arial, sans-serif;
 }
 
-function getColorByRarity(rarity) {
-    switch(rarity) {
-        case 'R':
-            return 'gold';
-        case 'I':
-            return 'silver';
-        case 'C':
-            return 'white';
-        default:
-            return 'black';
-    }
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 137px; /* Pode ser ajustado conforme necessário */
+    height: 200px; /* Pode ser ajustado conforme necessário */
+    border: 3.65%; /* 5px / 137px * 100% */
+    margin: 7.3%; /* 10px / 137px * 100% */
+    position: relative;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.titulo-subtitulo-container {
+    position: absolute;
+    top: 0.5%;
+    left: 7.3%;
+    right: 0;
+    height: 9%;
+    text-align: left;
+    padding: 0 10.95%;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: 1;
+}
+
+.card .titulo {
+    font-size: 5.84%; /* 8px / 137px * 100% */
+    font-weight: bold;
+    height: 5.5%; /* 11px / 200px * 100% */
+}
+
+.card .subtitulo {
+    font-size: 4.38%; /* 6px / 137px * 100% */
+    height: 4.5%; /* 9px / 200px * 100% */
+}
+
+.custo-container {
+    position: absolute;
+    top: 0.5%;
+    left: 0.5%;
+    width: 13.14%; /* 18px / 137px * 100% */
+    height: 9%; /* 18px / 200px * 100% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    box-shadow: 1.46%; /* 2px / 137px * 100% */
+    z-index: 2;
+}
+
+.card .custo {
+    font-size: 8.76%; /* 12px / 137px * 100% */
+    font-weight: bold;
+}
+
+.card .ilustracao {
+    position: absolute;
+    top: 10.5%; /* 21px / 200px * 100% */
+    left: 0;
+    width: 100%;
+    height: 45%; /* 90px / 200px * 100% */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card .atributos {
+    position: absolute;
+    top: 17%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 2;
+}
+
+.atributo {
+    width: auto;
+    min-width: 10.95%; /* 15px / 137px * 100% */
+    height: 9%; /* 18px / 200px * 100% */
+    margin-bottom: 1%; /* 2px / 200px * 100% */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 5.84%; /* 8px / 137px * 100% */
+    font-weight: bold;
+    color: black;
+    text-align: right;
+    padding: 0 1.46%; /* 2px / 137px * 100% */
+    background-color: rgba(217, 203, 128, 0.9);
+    box-shadow: 1.46%; /* 2px / 137px * 100% */
+}
+
+.atributo .simbolo {
+    font-size: 4.38%; /* 6px / 137px * 100% */
+    margin-left: 1.46%; /* 2px / 137px * 100% */
+}
+
+.card .tipo {
+    position: absolute;
+    top: 52.5%; /* 105px / 200px * 100% */
+    left: 10.95%; /* 15px / 137px * 100% */
+    right: 10.95%; /* 15px / 137px * 100% */
+    font-size: 5.84%; /* 8px / 137px * 100% */
+    font-weight: bold;
+    text-align: center;
+    padding: 1%; /* 2px / 200px * 100% */
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0.73%; /* 1px / 137px * 100% */
+}
+
+.card .texto-lore-container {
+    position: absolute;
+    top: 62.5%; /* 125px / 200px * 100% */
+    left: 0;
+    right: 0;
+    bottom: 6%; /* 12px / 200px * 100% */
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2.5%; /* 5px / 200px * 100% */
+    border-radius: 1.5%; /* 3px / 200px * 100% */
+    display: flex;
+    flex-direction: column;
+}
+
+.card .texto {
+    font-size: 6.57%; /* 9px / 137px * 100% */
+    text-align: justify;
+    margin-bottom: 2.5%; /* 5px / 200px * 100% */
+}
+
+.card .lore {
+    font-size: 3.65%; /* 5px / 137px * 100% */
+    font-style: italic;
+    text-align: center;
+}
+
+.card .id-container {
+    position: absolute;
+    bottom: 0.5%;
+    right: 0.5%;
+    left: 87.6%; /* 120px / 137px * 100% */
+    padding: 0.5%; /* 1px / 200px * 100% */
+    border-radius: 0.5%; /* 1px / 200px * 100% */
+    box-shadow: 1.46%; /* 2px / 137px * 100% */
+}
+
+.card .id {
+    font-size: 3.65%; /* 5px / 137px * 100% */
+    text-align: right;
+    font-weight: bold;
+    color: black;
 }
