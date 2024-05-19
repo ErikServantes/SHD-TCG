@@ -174,8 +174,8 @@ body {
 .card {
     /*width: 137px; /* Pode ser ajustado conforme necessário */
     /*height: 200px; /* Pode ser ajustado conforme necessário */
-    height: 100vh; /* Ajuste a altura conforme necessário */
-    width: calc(50vh * 0.685); /* Mantém a proporção 137:200 */
+    height: 400vh; /* Ajuste a altura conforme necessário */
+    width: calc(400 * 0.685); /* Mantém a proporção 137:200 */
     border: 3.65%; /* 5px / 137px * 100% */
     margin: 7.3%; /* 10px / 137px * 100% */
     position: relative;
