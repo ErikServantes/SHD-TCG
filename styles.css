@@ -47,6 +47,7 @@ body {
 .logo {
     height: 16px; /* Ajuste conforme necessário */
     width: auto;
+    left: 1px;
 }
 
 .custo-container {
