@@ -1,16 +1,70 @@
-/* Define a fonte padrão do corpo */
+/* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-/* Estilo do container das cartas */
+/* Estilo do Cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do Main */
+main {
+    padding: 20px;
+}
+
+/* Estilo da Seção de Criação de Baralho */
+#create-deck {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#create-deck h2 {
+    margin-top: 0;
+}
+
+/* Estilo do Container de Cartas */
 #card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-/* Estilo geral das cartas */
+/* Estilo das Cartas */
 .card {
     width: 137px;
     height: 200px;
@@ -22,7 +76,7 @@ body {
     max-height: 100%;
 }
 
-/* Container para título e subtítulo */
+/* Outros Estilos das Cartas conforme o código anterior */
 .titulo-subtitulo-container {
     position: absolute;
     top: 1px;
@@ -35,20 +89,17 @@ body {
     z-index: 1;
 }
 
-/* Estilo do título */
 .card .titulo {
     font-size: 8px;
     font-weight: bold;
     height: 11px;
 }
 
-/* Estilo do subtítulo */
 .card .subtitulo {
     font-size: 6px;
     height: 9px;
 }
 
-/* Container para o custo */
 .custo-container {
     position: absolute;
     top: 1px;
@@ -58,22 +109,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 1); /* Caixa semi-transparente */
-    border-radius: 50%; /* Faz o container ser circular */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
-    z-index: 2; /* Adicionado z-index maior */
+    background-color: rgba(255, 255, 255, 1); 
+    border-radius: 50%; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+    z-index: 2; 
 }
 
-/* Estilo do custo */
 .card .custo {
     font-size: 12px;
     font-weight: bold;
 }
 
-/* Estilo da ilustração */
 .card .ilustracao {
     position: absolute;
-    top: 21px; /* Topo da ilustração */
+    top: 21px; 
     left: 0px;
     width: 100%;
     height: 90px; 
@@ -82,7 +131,6 @@ body {
     background-position: center;
 }
 
-/* Estilo dos atributos */
 .card .atributos {
     position: absolute;
     top: 34px;
@@ -93,31 +141,28 @@ body {
     line-height: 2;
 }
 
-/* Estilo de cada atributo */
 .atributo {
-    width: auto; /* Permite que a largura se ajuste ao conteúdo */
-    min-width: 15px; /* Define a largura mínima */
+    width: auto; 
+    min-width: 15px; 
     height: 18px;
     margin-bottom: 2px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 8px; /* Tamanho da fonte do valor */
+    font-size: 8px; 
     font-weight: bold;
     color: black;
-    text-align: right; /* Alinha o texto à direita */
-    padding: 0 2px; /* Adicionado espaçamento entre o texto e a borda */
+    text-align: right; 
+    padding: 0 2px; 
     background-color: rgba(217, 203, 128, 0.9);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
 }
 
-/* Estilo do símbolo do atributo */
 .atributo .simbolo {
-    font-size: 6px; /* Tamanho do simbolo */
-    margin-left: 2px; /* Adicionado espaçamento entre valor e símbolo */
+    font-size: 6px; 
+    margin-left: 2px; 
 }
 
-/* Estilo do tipo da carta */
 .card .tipo {
     position: absolute;
     top: 105px;
@@ -128,38 +173,34 @@ body {
     text-align: center;
     padding: 2px 0px;
     background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75); /* Sombra */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75); 
 }
 
-/* Estilo do container de texto e lore */
 .card .texto-lore-container {
     position: absolute;
     top: 125px; 
     left: 0px;
     right: 0px;
     bottom: 12px;
-    background-color: rgba(255, 255, 255, 0.7); /* Caixa semi-transparente */
+    background-color: rgba(255, 255, 255, 0.7); 
     padding: 5px 10px;
     border-radius: 3px;
     display: flex;
     flex-direction: column;
 }
 
-/* Estilo do texto */
 .card .texto {
     font-size: 9px;
     text-align: justify;
-    margin-bottom: 5px; /* Espaço entre texto e lore */
+    margin-bottom: 5px; 
 }
 
-/* Estilo do lore */
 .card .lore {
     font-size: 5px;
     font-style: italic;
     text-align: center;
 }
 
-/* Container para o ID */
 .card .id-container {
     position: absolute;
     bottom: 1px;
@@ -167,13 +208,23 @@ body {
     left: 120px;
     padding: 1px 4px;
     border-radius: 1px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
 }
 
-/* Estilo do ID */
 .card .id {
     font-size: 5px;
     text-align: right;
     font-weight: bold;
-    color: black; /* Define a cor do texto como preto */
+    color: black; 
+}
+
+/* Estilo do Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
