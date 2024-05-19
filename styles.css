@@ -25,9 +25,6 @@ body {
     left: 10px;
     right: 0px;
     height: 18px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     text-align: left;
     padding: 0px 15px;
     background-color: rgba(255, 255, 255, 0.75);
@@ -43,11 +40,6 @@ body {
 .card .subtitulo {
     font-size: 6px;
     height: 9px;
-}
-
-.logo {
-    height: 16px;
-    width: auto;
 }
 
 .custo-container {
