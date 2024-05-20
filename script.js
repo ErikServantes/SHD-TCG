@@ -87,13 +87,17 @@ function addToDeck(data, cardCount) {
     if (cardCount[cardId] < 4) {
         cardCount[cardId]++;
         const card = createCard(data, 0.7);
-        card.style.position = 'absolute';
-        card.style.left = `${5 * cardCount[cardId]}px`; // Offset horizontal
-        card.style.top = `${5 * cardCount[cardId]}px`;  // Offset vertical
+        card.style.position = 'relative';
+        card.addEventListener('dblclick', () => removeFromDeck(card, cardId, cardCount));
         deckContainer.appendChild(card);
     } else {
         alert('Você só pode adicionar no máximo 4 cópias de cada carta.');
     }
+}
+
+function removeFromDeck(card, cardId, cardCount) {
+    card.remove();
+    cardCount[cardId]--;
 }
 
 function showCardPreview(data) {
