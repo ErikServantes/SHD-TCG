@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function populateFilters(cards) {
         const culturas = [...new Set(cards.map(card => card[3]))];
-        const tipos = [...new Set(cards.map(card[7]))];
+        const tipos = [...new Set(cards.map(card => card[7]))];
         
         const culturaFilters = document.getElementById('cultura-filters');
         culturas.forEach(cultura => {
