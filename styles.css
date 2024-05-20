@@ -91,8 +91,8 @@ body {
 
 #deck-container {
     display: flex;
-    flex-direction: column;
-    position: relative;
+    flex-wrap: wrap; /* Permitir que o container cresça para adicionar novas filas */
+    align-items: flex-start;
     height: 30%;
     background-color: #f0f0f0;
     padding: 10px;
@@ -267,4 +267,21 @@ body {
 .logo-container img {
     max-width: 100%;
     max-height: 100%;
+}
+
+.card .count {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
 }
