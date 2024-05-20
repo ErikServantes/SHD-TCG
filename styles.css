@@ -270,6 +270,25 @@ body {
     max-height: 100%;
 }
 
+.novo-container {
+    position: absolute;
+    top: 128px; /* Ajuste conforme necessário para alinhar verticalmente */
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 60px; /* Ajuste conforme necessário */
+    height: 60px; /* Ajuste conforme necessário */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Z-index inferior ao do texto-lore-container */
+    opacity: 0.2; /* Ajuste a opacidade para o efeito de marca d'água */
+}
+
+.novo-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 .card .count {
     position: absolute;
     top: 50%;
