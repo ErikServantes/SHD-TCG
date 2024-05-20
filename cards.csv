@@ -6,13 +6,13 @@ Custo,Título,Subtítulo,Cultura,Força,Agilidade,Vitalidade,Tipo,Texto,Lore,ID,
 5,Sacerdote de Kashneb,Cura Divina,Kashneb,3,3,4,Personagem,Um sacerdote devoto de Kashneb,Suas preces trazem paz,005,I
 6,Assassino de Thally,Matador Silencioso,Thally,6,4,2,Personagem,Um assassino mortal de Thally,Ataca das sombras,006,C
 7,Bruxo de Wasting,Mago das Trevas,Wasting,4,2,4,Personagem,Um bruxo com poderes sombrios de Wasting,Sua magia corrompe,007,R
-8,Fera de Murier,Criatura Selvagem,Murier,7,3,3,Personagem,Uma fera temível de Murier,Ele percorre as terras selvagens,008,I
+8,Fera de Murier,Criatura Selvagem,Murier,7,3,3,Arma,Uma fera temível de Murier,Ele percorre as terras selvagens,008,I
 9,Arqueiro de Anuviah,Atirador de Elite,Anuviah,3,5,2,Personagem,Um arqueiro habilidoso de Anuviah,Sua mira é precisa,009,C
 10,Mago de Sumyr,Lançador de Feitiços,Sumyr,5,3,2,Personagem,Um mago sábio de Sumyr,Seus feitiços entrelaçam o tempo,010,R
 1,Paladino de Esterbalium,Cavaleiro Sagrado,Esterbalium,4,2,5,Personagem,Um cavaleiro sagrado de Esterbalium,Defensor dos fracos,011,I
 2,Ranger de Noman,Guia Selvagem,Noman,2,5,3,Personagem,Um ranger especialista em sobrevivência na selva,Seus sentidos são aguçados,012,C
 3,Xamã de Kashneb,Guia Espiritual,Kashneb,3,4,2,Personagem,Um guia espiritual de Kashneb,Sua sabedoria é vasta,013,R
-4,Ladino de Thally,Ladrão Ágil,Thally,5,5,1,Personagem,Um ladino astuto de Thally,Ele pode roubar qualquer coisa,014,I
+4,Ladino de Thally,Ladrão Ágil,Thally,5,5,1,Aliado,Um ladino astuto de Thally,Ele pode roubar qualquer coisa,014,I
 5,Necromante de Wasting,Comandante dos Mortos,Wasting,4,1,4,Personagem,Um necromante que comanda os mortos de Wasting,Sua legião é vasta,015,C
 6,Caçador de Murier,Mestre das Feras,Murier,6,2,3,Personagem,Um caçador que doma as feras de Murier,Suas habilidades são incomparáveis,016,R
 7,Guardião de Anuviah,Protetor de Anuviah,Anuviah,4,2,4,Personagem,Um guardião de Anuviah,Ele protege o reino,017,I
@@ -22,7 +22,7 @@ Custo,Título,Subtítulo,Cultura,Força,Agilidade,Vitalidade,Tipo,Texto,Lore,ID,
 1,Clérigo de Kashneb,Cura Sagrada,Kashneb,3,3,3,Personagem,Um clérigo de Kashneb,Suas habilidades de cura são fortes,021,C
 2,Espião de Thally,Infiltrador,Thally,5,4,2,Personagem,Um espião de Thally,Ele coleta segredos,022,R
 3,Bruxa de Wasting,Feiticeira Sombria,Wasting,4,2,3,Personagem,Uma bruxa de Wasting,Seus feitiços trazem desespero,023,I
-4,Lobo de Murier,Fera Selvagem,Murier,6,2,3,Personagem,Um lobo selvagem de Murier,Feroz e leal,024,C
+4,Lobo de Murier,Fera Selvagem,Murier,6,2,3,Comandante,Um lobo selvagem de Murier,Feroz e leal,024,C
 5,Herói de Anuviah,Salvador de Anuviah,Anuviah,5,3,4,Personagem,Um herói de Anuviah,Corajoso e verdadeiro,025,R
 6,Alquimista de Sumyr,Mestre de Poções,Sumyr,3,4,2,Personagem,Um alquimista de Sumyr,Suas poções são poderosas,026,I
 7,Defensor de Esterbalium,Portador do Escudo,Esterbalium,4,1,5,Personagem,Um defensor de Esterbalium,Ele mantém a linha,027,C
