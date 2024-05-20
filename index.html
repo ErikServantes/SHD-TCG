@@ -7,6 +7,30 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="filter-container">
+        <h3>Filtros</h3>
+        <div>
+            <h4>Cultura</h4>
+            <div id="cultura-filters"></div>
+        </div>
+        <div>
+            <h4>Tipo</h4>
+            <div id="tipo-filters"></div>
+        </div>
+        <div>
+            <h4>Ordenar por</h4>
+            <select id="sort-by">
+                <option value="id">ID</option>
+                <option value="tipo">Tipo</option>
+                <option value="cultura">Cultura</option>
+            </select>
+            <select id="sort-order">
+                <option value="asc">Ascendente</option>
+                <option value="desc">Descendente</option>
+            </select>
+        </div>
+        <button id="reset-filters">Reset Filtros</button>
+    </div>
     <div id="top-container">
         <div id="card-preview" class="hidden"></div>
         <div id="card-list"></div>
