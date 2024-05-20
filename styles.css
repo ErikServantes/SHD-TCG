@@ -25,7 +25,7 @@ body {
     left: 10px;
     right: 0px;
     height: 18px;
-    /*display: flex;*/
+    display: flex;
     /*align-items: center;*/
     /*justify-content: space-between;*/
     padding: 0px 0px;
