@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(data => {
             const rows = data.split('\n').slice(1);
-            const container = document.getElementById('card-container');
+            const container = document.getElementById('card-list');
             const cardCount = {};
 
             rows.forEach(row => {
@@ -87,8 +87,9 @@ function addToDeck(data, cardCount) {
     if (cardCount[cardId] < 4) {
         cardCount[cardId]++;
         const card = createCard(data, 0.7);
-        card.style.position = 'relative';
-        card.style.left = `${5 * (cardCount[cardId] - 1)}%`;
+        card.style.position = 'absolute';
+        card.style.left = `${5 * cardCount[cardId]}px`; // Offset horizontal
+        card.style.top = `${5 * cardCount[cardId]}px`;  // Offset vertical
         deckContainer.appendChild(card);
     } else {
         alert('Você só pode adicionar no máximo 4 cópias de cada carta.');
