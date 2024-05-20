@@ -11,16 +11,49 @@ body {
     top: 10px;
     left: 10px;
     background: white;
-    padding: 10px;
+    padding: 5px; /* Reduzido de 10px para 5px */
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    width: 150px; /* Definido um valor fixo menor */
+    font-size: 0.8em; /* Reduzido tamanho da fonte */
+}
+
+#filter-container h3 {
+    margin: 0;
+    margin-bottom: 5px; /* Reduzido de 10px para 5px */
+    font-size: 1.2em; /* Reduzido tamanho da fonte */
+}
+
+#filter-container h4 {
+    margin: 5px 0; /* Reduzido de 10px para 5px */
+    font-size: 1em; /* Reduzido tamanho da fonte */
+}
+
+#filter-container input[type="checkbox"] {
+    margin-right: 5px; /* Reduzido de 10px para 5px */
+}
+
+#filter-container label {
+    font-size: 0.9em; /* Reduzido tamanho da fonte */
+}
+
+#filter-container select {
+    width: 100%;
+    font-size: 0.9em; /* Reduzido tamanho da fonte */
+    margin-bottom: 5px; /* Reduzido de 10px para 5px */
+}
+
+#filter-container button {
+    width: 100%;
+    font-size: 0.9em; /* Reduzido tamanho da fonte */
+    padding: 5px; /* Reduzido de 10px para 5px */
 }
 
 #top-container {
     display: flex;
     height: 70%;
-    margin-left: 200px; /* Espaço para o container de filtros */
+    margin-left: 180px; /* Ajustado para novo tamanho do container de filtros */
 }
 
 #card-preview {
