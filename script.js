@@ -86,7 +86,7 @@ function addToDeck(data, cardCount) {
 
     if (cardCount[cardId] < 4) {
         cardCount[cardId]++;
-        const card = createCard(data, 0.7);
+        const card = createCard(data, 1); // Escala original para o baralho
         card.style.position = 'relative';
         card.addEventListener('dblclick', () => removeFromDeck(card, cardId, cardCount));
         deckContainer.appendChild(card);
@@ -103,13 +103,14 @@ function removeFromDeck(card, cardId, cardCount) {
 function showCardPreview(data) {
     const previewContainer = document.getElementById('card-preview');
     previewContainer.innerHTML = '';
-    const card = createCard(data, 1); // Ajuste o tamanho da ampliação
-    card.style.width = '100%'; // Ajusta a largura ao container
-    card.style.height = 'auto'; // Mantém a proporção
+    const card = createCard(data); // Sem escala
+    card.style.width = 'auto'; // Mantém a largura original
+    card.style.height = 'auto'; // Mantém a altura original
+    card.style.maxWidth = '100%'; // Não ultrapassa a largura do container
+    card.style.maxHeight = '100%'; // Não ultrapassa a altura do container
     previewContainer.appendChild(card);
     previewContainer.classList.remove('hidden');
 }
-
 
 function getColorByRarity(rarity) {
     switch(rarity) {
