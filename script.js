@@ -9,11 +9,15 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             const rows = data.split('\n').slice(1);
             const container = document.getElementById('card-container');
+            const cardCount = {};
+
             rows.forEach(row => {
                 if (row.trim() !== '') {
                     const columns = row.split(',');
-                    if (columns.length === 12) { // Verifica se a linha tem o número correto de colunas
+                    if (columns.length === 12) {
                         const card = createCard(columns);
+                        card.addEventListener('dblclick', () => addToDeck(columns, cardCount));
+                        card.addEventListener('click', () => showCardPreview(columns));
                         container.appendChild(card);
                     }
                 }
@@ -24,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 });
 
-function createCard(data) {
+function createCard(data, scale = 1) {
     const imagePath = `images/${data[3].trim()}.png`;
     const illustrationPath = `images/${data[10].trim()}.png`;
     const logoPath = `images/${data[3].trim()}logo.png`; // Caminho do logotipo
@@ -32,6 +36,7 @@ function createCard(data) {
     const card = document.createElement('div');
     card.className = 'card';
     card.style.backgroundImage = `url('${imagePath}')`;
+    card.style.transform = `scale(${scale})`;
 
     const rarityColor = getColorByRarity(data[11].trim());
 
@@ -69,6 +74,33 @@ function createCard(data) {
     `;
 
     return card;
+}
+
+function addToDeck(data, cardCount) {
+    const deckContainer = document.getElementById('deck-container');
+    const cardId = data[10].trim();
+
+    if (!cardCount[cardId]) {
+        cardCount[cardId] = 0;
+    }
+
+    if (cardCount[cardId] < 4) {
+        cardCount[cardId]++;
+        const card = createCard(data, 0.7);
+        card.style.position = 'relative';
+        card.style.left = `${5 * (cardCount[cardId] - 1)}%`;
+        deckContainer.appendChild(card);
+    } else {
+        alert('Você só pode adicionar no máximo 4 cópias de cada carta.');
+    }
+}
+
+function showCardPreview(data) {
+    const previewContainer = document.getElementById('card-preview');
+    previewContainer.innerHTML = '';
+    const card = createCard(data, 2); // Ampliação de 200%
+    previewContainer.appendChild(card);
+    previewContainer.classList.remove('hidden');
 }
 
 function getColorByRarity(rarity) {
