@@ -290,7 +290,7 @@ body {
 
 .popup-card {
     position: absolute;
-    transform: scale(1.5);
+    transform: scale(2);
     z-index: 1000;
     pointer-events: none;
 }
