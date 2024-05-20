@@ -233,9 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 popup = createCard(data, 1.5);
                 popup.classList.add('popup-card');
                 document.body.appendChild(popup);
-                const rect = card.getBoundingClientRect();
-                popup.style.top = `${rect.top - rect.height * 0.25}px`;
-                popup.style.left = `${rect.left - rect.width * 0.25}px`;
+                positionPopup(card, popup);
             }
         };
 
@@ -244,6 +242,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 popup.remove();
                 popup = null;
             }
+        };
+
+        const positionPopup = (card, popup) => {
+            const rect = card.getBoundingClientRect();
+            const popupRect = popup.getBoundingClientRect();
+
+            let top = rect.top - rect.height * 0.25;
+            let left = rect.left - rect.width * 0.25;
+
+            // Ajuste para manter o popup dentro da tela
+            if (top + popupRect.height > window.innerHeight) {
+                top = window.innerHeight - popupRect.height;
+            }
+            if (top < 0) {
+                top = 0;
+            }
+            if (left + popupRect.width > window.innerWidth) {
+                left = window.innerWidth - popupRect.width;
+            }
+            if (left < 0) {
+                left = 0;
+            }
+
+            popup.style.top = `${top}px`;
+            popup.style.left = `${left}px`;
         };
 
         card.addEventListener('mousedown', (event) => {
