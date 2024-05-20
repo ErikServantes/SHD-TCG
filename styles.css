@@ -159,3 +159,20 @@ body {
     font-weight: bold;
     color: black; /* Define a cor do texto como preto */
 }
+
+.logo-container {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3; /* Definindo um z-index alto para sobrepor o resto */
+}
+
+.logo-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
