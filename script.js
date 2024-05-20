@@ -152,6 +152,9 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="count" style="display: none;">x1</div>
         `;
 
+        // Adiciona os eventos de mouse
+        addPopupEvents(card, data);
+
         return card;
     }
 
@@ -220,4 +223,56 @@ document.addEventListener('DOMContentLoaded', function() {
             sidebar.classList.add('open');
         }
     });
+
+    function addPopupEvents(card, data) {
+        let timer;
+        let lastMouseX;
+        let lastMouseY;
+        let popup;
+
+        const showPopup = () => {
+            if (!popup) {
+                popup = createCard(data, 1.5);
+                popup.classList.add('popup-card');
+                document.body.appendChild(popup);
+                const rect = card.getBoundingClientRect();
+                popup.style.top = `${rect.top - rect.height * 0.25}px`;
+                popup.style.left = `${rect.left - rect.width * 0.25}px`;
+            }
+        };
+
+        const hidePopup = () => {
+            if (popup) {
+                popup.remove();
+                popup = null;
+            }
+        };
+
+        card.addEventListener('mouseenter', (event) => {
+            lastMouseX = event.clientX;
+            lastMouseY = event.clientY;
+            timer = setTimeout(showPopup, 500);
+        });
+
+        card.addEventListener('mouseleave', () => {
+            clearTimeout(timer);
+            hidePopup();
+        });
+
+        card.addEventListener('mousemove', (event) => {
+            const deltaX = Math.abs(event.clientX - lastMouseX);
+            const deltaY = Math.abs(event.clientY - lastMouseY);
+            if (deltaX > 30 || deltaY > 30) {
+                clearTimeout(timer);
+                hidePopup();
+            }
+            lastMouseX = event.clientX;
+            lastMouseY = event.clientY;
+        });
+
+        card.addEventListener('click', () => {
+            clearTimeout(timer);
+            hidePopup();
+        });
+    }
 });
