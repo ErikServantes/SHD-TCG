@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function populateFilters(cards) {
         const culturas = [...new Set(cards.map(card => card[3]))];
-        const tipos = [...new Set(cards.map(card => card[7]))];
+        const tipos = [...new Set(cards.map(card[7]))];
         
         const culturaFilters = document.getElementById('cultura-filters');
         culturas.forEach(cultura => {
@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById('sort-by').addEventListener('change', () => filterAndSortCards());
         document.getElementById('sort-order').addEventListener('change', () => filterAndSortCards());
+        document.getElementById('card-scale').addEventListener('change', () => renderCards(cardsData));
         document.getElementById('reset-filters').addEventListener('click', () => resetFilters());
     }
 
@@ -65,10 +66,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const container = document.getElementById('card-list');
         container.innerHTML = '';
         const cardCount = {};
+        const scale = parseFloat(document.getElementById('card-scale').value);
 
         cards.forEach(columns => {
             if (columns.length === 12) {
-                const card = createCard(columns);
+                const card = createCard(columns, scale);
                 card.addEventListener('dblclick', () => addToDeck(columns, cardCount));
                 container.appendChild(card);
             }
@@ -103,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('#filter-container input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
         document.getElementById('sort-by').value = 'id';
         document.getElementById('sort-order').value = 'asc';
+        document.getElementById('card-scale').value = '1';
         renderCards(cardsData);
     }
 
