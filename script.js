@@ -190,4 +190,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 return 'black';
         }
     }
+
+    document.getElementById('toggle-filter').addEventListener('click', function() {
+        const sidebar = document.getElementById('filter-sidebar');
+        if (sidebar.classList.contains('open')) {
+            sidebar.classList.remove('open');
+        } else {
+            sidebar.classList.add('open');
+        }
+    });
 });
