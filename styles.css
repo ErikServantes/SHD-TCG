@@ -42,14 +42,14 @@ body {
 
 .card .subtitulo {
     font-size: 6px;
-    left: 15px;
+    margin-left: 15px;
     height: 9px;
 }
 
 .logo {
     height: 18px; /* Ajuste conforme necessário */
     width: auto;
-    right: 1px;
+    margin-right: 1px;
 }
 
 .custo-container {
