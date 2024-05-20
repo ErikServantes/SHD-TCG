@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById('sort-by').addEventListener('change', () => filterAndSortCards());
         document.getElementById('sort-order').addEventListener('change', () => filterAndSortCards());
-        document.getElementById('card-scale').addEventListener('change', () => renderCards(cardsData));
         document.getElementById('reset-filters').addEventListener('click', () => resetFilters());
     }
 
@@ -66,11 +65,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const container = document.getElementById('card-list');
         container.innerHTML = '';
         const cardCount = {};
-        const scale = parseFloat(document.getElementById('card-scale').value);
 
         cards.forEach(columns => {
             if (columns.length === 12) {
-                const card = createCard(columns, scale);
+                const card = createCard(columns);
                 card.addEventListener('dblclick', () => addToDeck(columns, cardCount));
                 container.appendChild(card);
             }
@@ -105,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('#filter-container input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
         document.getElementById('sort-by').value = 'id';
         document.getElementById('sort-order').value = 'asc';
-        document.getElementById('card-scale').value = '1';
         renderCards(cardsData);
     }
 
