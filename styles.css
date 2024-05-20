@@ -17,14 +17,8 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px; /* Adicionado padding */
-}
-
-#card-preview .card {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
+    padding: 10px;
+    display: none; /* Esconde o container */
 }
 
 #card-list {
