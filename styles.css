@@ -17,6 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px; /* Adicionado padding */
 }
 
 #card-list {
@@ -30,11 +31,12 @@ body {
 
 #deck-container {
     display: flex;
+    flex-wrap: wrap; /* Permitir que o container cresça para adicionar novas filas */
     align-items: flex-start;
     height: 30%;
     background-color: #f0f0f0;
     padding: 10px;
-    overflow-x: auto;
+    overflow-y: auto; /* Permitir rolagem vertical */
 }
 
 .card {
