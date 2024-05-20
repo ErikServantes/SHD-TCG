@@ -149,6 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="logo-container">
                 <img src="${logoPath}" alt="Logo">
             </div>
+            <div class="count" style="display: none;">x1</div>
         `;
 
         return card;
@@ -158,26 +159,41 @@ document.addEventListener('DOMContentLoaded', function() {
         const deckContainer = document.getElementById('deck-container');
         const cardId = data[10].trim();
 
+        let cardElement = deckContainer.querySelector(`[data-card-id="${cardId}"]`);
+
         if (!cardCount[cardId]) {
             cardCount[cardId] = 0;
         }
 
         if (cardCount[cardId] < 4) {
             cardCount[cardId]++;
-            const card = createCard(data, 1); // Escala original para o baralho
-            card.style.position = 'absolute';
-            card.style.left = `${(cardCount[cardId] - 1) * 20}px`; // Ajuste para sobrepor parcialmente
-            card.style.top = `${deckContainer.children.length * 40}px`;
-            card.addEventListener('dblclick', () => removeFromDeck(card, cardId, cardCount));
-            deckContainer.appendChild(card);
+            if (!cardElement) {
+                const card = createCard(data, 1); // Escala original para o baralho
+                card.setAttribute('data-card-id', cardId);
+                card.addEventListener('dblclick', () => removeFromDeck(card, cardId, cardCount));
+                deckContainer.appendChild(card);
+                cardElement = card;
+            }
+            const countElement = cardElement.querySelector('.count');
+            countElement.style.display = 'block';
+            countElement.textContent = `x${cardCount[cardId]}`;
         } else {
             alert('Você só pode adicionar no máximo 4 cópias de cada carta.');
         }
     }
 
     function removeFromDeck(card, cardId, cardCount) {
-        card.remove();
-        cardCount[cardId]--;
+        if (cardCount[cardId] > 1) {
+            cardCount[cardId]--;
+            const countElement = card.querySelector('.count');
+            countElement.textContent = `x${cardCount[cardId]}`;
+            if (cardCount[cardId] === 1) {
+                countElement.style.display = 'none';
+            }
+        } else {
+            card.remove();
+            delete cardCount[cardId];
+        }
     }
 
     function getColorByRarity(rarity) {
