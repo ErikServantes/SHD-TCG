@@ -6,54 +6,68 @@ body {
     flex-direction: column;
 }
 
-#filter-container {
+#filter-sidebar {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 0;
+    height: 100%;
     background: white;
-    padding: 5px; /* Reduzido de 10px para 5px */
-    border: 1px solid #ccc;
+    border-right: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    width: 150px; /* Definido um valor fixo menor */
-    font-size: 0.8em; /* Reduzido tamanho da fonte */
+    transition: transform 0.3s ease;
+    width: 200px;
+    transform: translateX(-200px);
 }
 
-#filter-container h3 {
-    margin: 0;
-    margin-bottom: 5px; /* Reduzido de 10px para 5px */
-    font-size: 1.2em; /* Reduzido tamanho da fonte */
+#filter-sidebar.open {
+    transform: translateX(0);
 }
 
-#filter-container h4 {
-    margin: 5px 0; /* Reduzido de 10px para 5px */
-    font-size: 1em; /* Reduzido tamanho da fonte */
+#toggle-filter {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 5px 10px;
+    z-index: 1001;
+}
+
+#filter-container {
+    padding: 10px;
+}
+
+#filter-container h3, #filter-container h4 {
+    margin: 10px 0;
 }
 
 #filter-container input[type="checkbox"] {
-    margin-right: 5px; /* Reduzido de 10px para 5px */
+    margin-right: 10px;
 }
 
 #filter-container label {
-    font-size: 0.9em; /* Reduzido tamanho da fonte */
+    font-size: 0.9em;
 }
 
 #filter-container select {
     width: 100%;
-    font-size: 0.9em; /* Reduzido tamanho da fonte */
-    margin-bottom: 5px; /* Reduzido de 10px para 5px */
+    font-size: 0.9em;
+    margin-bottom: 10px;
 }
 
 #filter-container button {
     width: 100%;
-    font-size: 0.9em; /* Reduzido tamanho da fonte */
-    padding: 5px; /* Reduzido de 10px para 5px */
+    font-size: 0.9em;
+    padding: 10px;
 }
 
 #top-container {
     display: flex;
     height: 70%;
-    margin-left: 180px; /* Ajustado para novo tamanho do container de filtros */
+    margin-left: 10px; /* Ajustado para o botão */
 }
 
 #card-preview {
