@@ -212,8 +212,8 @@ body {
 }
 
 .card .texto-lore-container {
-    position: relative; /* Alterado para permitir o uso de um pseudo-elemento */
-    top: 125px;
+    position: absolute;
+    top: 125px; 
     left: 0px;
     right: 0px;
     bottom: 12px;
@@ -222,37 +222,18 @@ body {
     border-radius: 3px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Adicionado para centralizar o conteúdo */
-}
-
-.card .texto-lore-container::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80px; /* Tamanho do símbolo, ajuste conforme necessário */
-    height: 80px; /* Tamanho do símbolo, ajuste conforme necessário */
-    background-image: url('images/${data[3].trim()}logo.png'); /* Caminho do logotipo */
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.2;
-    transform: translate(-50%, -50%);
-    z-index: 1; /* Coloque o z-index atrás do texto */
 }
 
 .card .texto {
     font-size: 9px;
     text-align: justify;
     margin-bottom: 5px; /* Espaço entre texto e lore */
-    z-index: 2; /* Adicionado z-index para sobrepor o símbolo */
 }
 
 .card .lore {
     font-size: 5px;
     font-style: italic;
     text-align: center;
-    z-index: 2; /* Adicionado z-index para sobrepor o símbolo */
 }
 
 .card .id-container {
