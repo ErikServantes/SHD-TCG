@@ -103,10 +103,13 @@ function removeFromDeck(card, cardId, cardCount) {
 function showCardPreview(data) {
     const previewContainer = document.getElementById('card-preview');
     previewContainer.innerHTML = '';
-    const card = createCard(data, 2); // Ampliação de 200%
+    const card = createCard(data, 1); // Ajuste o tamanho da ampliação
+    card.style.width = '100%'; // Ajusta a largura ao container
+    card.style.height = 'auto'; // Mantém a proporção
     previewContainer.appendChild(card);
     previewContainer.classList.remove('hidden');
 }
+
 
 function getColorByRarity(rarity) {
     switch(rarity) {
