@@ -175,8 +175,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 cardElement = card;
             }
             const countElement = cardElement.querySelector('.count');
-            countElement.style.display = 'block';
+            countElement.style.display = 'flex';
             countElement.textContent = `x${cardCount[cardId]}`;
+
+            // Garantir que a carta adicionada recentemente fique visível
+            cardElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else {
             alert('Você só pode adicionar no máximo 4 cópias de cada carta.');
         }
