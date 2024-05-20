@@ -226,8 +226,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function addPopupEvents(card, data) {
         let timer;
-        let lastMouseX;
-        let lastMouseY;
         let popup;
 
         const showPopup = () => {
@@ -248,29 +246,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 
-        card.addEventListener('mouseenter', (event) => {
-            lastMouseX = event.clientX;
-            lastMouseY = event.clientY;
-            timer = setTimeout(showPopup, 500);
+        card.addEventListener('mousedown', (event) => {
+            if (event.button === 0) {  // Verifica se é o botão esquerdo do mouse
+                timer = setTimeout(showPopup, 500);
+            }
         });
 
-        card.addEventListener('mouseleave', () => {
+        card.addEventListener('mouseup', () => {
             clearTimeout(timer);
             hidePopup();
         });
 
-        card.addEventListener('mousemove', (event) => {
-            const deltaX = Math.abs(event.clientX - lastMouseX);
-            const deltaY = Math.abs(event.clientY - lastMouseY);
-            if (deltaX > 30 || deltaY > 30) {
-                clearTimeout(timer);
-                hidePopup();
-            }
-            lastMouseX = event.clientX;
-            lastMouseY = event.clientY;
-        });
-
-        card.addEventListener('click', () => {
+        card.addEventListener('mouseleave', () => {
             clearTimeout(timer);
             hidePopup();
         });
