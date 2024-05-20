@@ -222,6 +222,7 @@ body {
     border-radius: 3px;
     display: flex;
     flex-direction: column;
+    z-index: 1; /* Z-index inferior ao do texto-lore-container */
 }
 
 .card .texto {
