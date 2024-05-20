@@ -287,3 +287,10 @@ body {
     justify-content: center;
     z-index: 10;
 }
+
+.popup-card {
+    position: absolute;
+    transform: scale(1.5);
+    z-index: 1000;
+    pointer-events: none;
+}
