@@ -1,30 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM fully loaded and parsed');
     fetch('cards.csv')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok: ' + response.statusText);
             }
-            console.log('CSV file fetched successfully');
             return response.text();
         })
         .then(data => {
-            console.log('CSV data:', data);
             const rows = data.split('\n').slice(1);
             const container = document.getElementById('card-container');
-            console.log('Rows:', rows);
             rows.forEach(row => {
                 if (row.trim() !== '') {
                     const columns = row.split(',');
-                    console.log('Columns:', columns);
                     if (columns.length === 12) { // Verifica se a linha tem o número correto de colunas
                         const card = createCard(columns);
                         container.appendChild(card);
-                    } else {
-                        console.warn('Row does not have 12 columns:', columns);
                     }
-                } else {
-                    console.warn('Empty row detected');
                 }
             });
         })
@@ -34,10 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function createCard(data) {
-    console.log('Creating card with data:', data);
     const imagePath = `images/${data[3].trim()}.png`;
     const illustrationPath = `images/${data[10].trim()}.png`;
-    const logoPath = `images/${data[3].trim()}logo.png`;
 
     const card = document.createElement('div');
     card.className = 'card';
@@ -50,11 +39,8 @@ function createCard(data) {
             <div class="custo">${data[0].trim()}</div>
         </div>
         <div class="titulo-subtitulo-container">
-            <div>
-                <div class="titulo">${data[1].trim()}</div>
-                <div class="subtitulo">${data[2].trim()}</div>
-            </div>
-            <img src="${logoPath}" class="logo">
+            <div class="titulo">${data[1].trim()}</div>
+            <div class="subtitulo">${data[2].trim()}</div>
         </div>
         <div class="ilustracao" style="background-image: url('${illustrationPath}');"></div>
         <div class="atributos">
@@ -82,7 +68,6 @@ function createCard(data) {
 }
 
 function getColorByRarity(rarity) {
-    console.log('Getting color for rarity:', rarity);
     switch(rarity) {
         case 'R':
             return 'gold';
