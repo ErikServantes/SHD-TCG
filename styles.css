@@ -8,38 +8,30 @@ body {
 
 #card-display {
     display: flex;
-    flex-direction: column;
     height: 75%;
-    position: relative;
-    overflow: auto;
     border-bottom: 2px solid #000;
 }
 
-#card-container {
+#card-list {
+    flex: 2;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    overflow: auto;
     padding: 10px;
 }
 
 #card-preview {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 4;
-}
-
-#card-preview.hidden {
-    display: none;
 }
 
 #deck-container {
+    position: relative;
     display: flex;
     align-items: flex-start;
     height: 25%;
