@@ -247,23 +247,33 @@ document.addEventListener('DOMContentLoaded', function() {
         const positionPopup = (card, popup) => {
             const rect = card.getBoundingClientRect();
             const popupRect = popup.getBoundingClientRect();
+            
+            let top, left;
 
-            let top = rect.top - rect.height * 0.25;
-            let left = rect.left - rect.width * 0.25;
+            // Determine the best corner to anchor the popup
+            if (rect.top + popupRect.height <= window.innerHeight && rect.left + popupRect.width <= window.innerWidth) {
+                // Bottom right corner has enough space
+                top = rect.bottom;
+                left = rect.right;
+            } else if (rect.top - popupRect.height >= 0 && rect.left + popupRect.width <= window.innerWidth) {
+                // Top right corner has enough space
+                top = rect.top - popupRect.height;
+                left = rect.right;
+            } else if (rect.top + popupRect.height <= window.innerHeight && rect.left - popupRect.width >= 0) {
+                // Bottom left corner has enough space
+                top = rect.bottom;
+                left = rect.left - popupRect.width;
+            } else {
+                // Top left corner or no space, fallback
+                top = rect.top - popupRect.height;
+                left = rect.left - popupRect.width;
+            }
 
-            // Ajuste para manter o popup dentro da tela
-            if (top + popupRect.height > window.innerHeight) {
-                top = window.innerHeight - popupRect.height;
-            }
-            if (top < 0) {
-                top = 0;
-            }
-            if (left + popupRect.width > window.innerWidth) {
-                left = window.innerWidth - popupRect.width;
-            }
-            if (left < 0) {
-                left = 0;
-            }
+            // Ensure the popup stays within viewport bounds
+            if (top < 0) top = 0;
+            if (left < 0) left = 0;
+            if (top + popupRect.height > window.innerHeight) top = window.innerHeight - popupRect.height;
+            if (left + popupRect.width > window.innerWidth) left = window.innerWidth - popupRect.width;
 
             popup.style.top = `${top}px`;
             popup.style.left = `${left}px`;
