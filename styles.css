@@ -6,9 +6,21 @@ body {
     flex-direction: column;
 }
 
+#filter-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
 #top-container {
     display: flex;
     height: 70%;
+    margin-left: 200px; /* Espaço para o container de filtros */
 }
 
 #card-preview {
