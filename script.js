@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (columns.length === 12) {
                         const card = createCard(columns);
                         card.addEventListener('dblclick', () => addToDeck(columns, cardCount));
-                        card.addEventListener('click', () => showCardPreview(columns));
                         container.appendChild(card);
                     }
                 }
@@ -98,18 +97,6 @@ function addToDeck(data, cardCount) {
 function removeFromDeck(card, cardId, cardCount) {
     card.remove();
     cardCount[cardId]--;
-}
-
-function showCardPreview(data) {
-    const previewContainer = document.getElementById('card-preview');
-    previewContainer.innerHTML = '';
-    const card = createCard(data); // Sem escala
-    card.style.width = 'auto'; // Mantém a largura original
-    card.style.height = 'auto'; // Mantém a altura original
-    card.style.maxWidth = '100%'; // Não ultrapassa a largura do container
-    card.style.maxHeight = '100%'; // Não ultrapassa a altura do container
-    previewContainer.appendChild(card);
-    previewContainer.classList.remove('hidden');
 }
 
 function getColorByRarity(rarity) {
