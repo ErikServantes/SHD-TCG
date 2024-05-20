@@ -165,7 +165,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (cardCount[cardId] < 4) {
             cardCount[cardId]++;
             const card = createCard(data, 1); // Escala original para o baralho
-            card.style.position = 'relative';
+            card.style.position = 'absolute';
+            card.style.left = `${(cardCount[cardId] - 1) * 20}px`; // Ajuste para sobrepor parcialmente
+            card.style.top = `${deckContainer.children.length * 40}px`;
             card.addEventListener('dblclick', () => removeFromDeck(card, cardId, cardCount));
             deckContainer.appendChild(card);
         } else {
