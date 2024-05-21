@@ -297,16 +297,17 @@ body {
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.75);
     color: white;
-    font-size: 28px; /* Dobro do tamanho original */
+    font-size: 28px;
     font-weight: bold;
     border-radius: 50%;
-    width: 48px; /* Dobro do tamanho original */
-    height: 48px; /* Dobro do tamanho original */
-    display: flex;
+    width: 48px;
+    height: 48px;
+    display: none; /* Por padrão, o contador não é exibido */
     align-items: center;
     justify-content: center;
     z-index: 10;
 }
+
 
 .popup-card {
     position: absolute;
