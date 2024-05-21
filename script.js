@@ -166,7 +166,7 @@ function createCard(data, scale = 1) {
 }
 
 
-    function addToDeck(data, cardCount) {
+function addToDeck(data, cardCount) {
     const deckContainer = document.getElementById('deck-container');
     const cardId = data[10].trim();
 
@@ -214,6 +214,7 @@ function removeFromDeck(card, cardId, cardCount) {
         delete cardCount[cardId];
     }
 }
+
 
     function getColorByRarity(rarity) {
         switch(rarity) {
