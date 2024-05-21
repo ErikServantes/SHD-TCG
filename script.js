@@ -106,109 +106,108 @@ document.addEventListener('DOMContentLoaded', function() {
         renderCards(cardsData);
     }
 
-function createCard(data, scale = 1) {
-    const imagePath = `images/${data[3].trim()}.png`;
-    const illustrationPath = `images/${data[10].trim()}.png`;
-    const logoPath = `images/${data[3].trim()}logo.png`; // Caminho do logotipo
+    function createCard(data, scale = 1) {
+        const imagePath = `images/${data[3].trim()}.png`;
+        const illustrationPath = `images/${data[10].trim()}.png`;
+        const logoPath = `images/${data[3].trim()}logo.png`; // Caminho do logotipo
 
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.style.backgroundImage = `url('${imagePath}')`;
-    card.style.transform = `scale(${scale})`;
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.style.backgroundImage = `url('${imagePath}')`;
+        card.style.transform = `scale(${scale})`;
 
-    const rarityColor = getColorByRarity(data[11].trim());
+        const rarityColor = getColorByRarity(data[11].trim());
 
-    card.innerHTML = `
-        <div class="custo-container">
-            <div class="custo">${data[0].trim()}</div>
-        </div>
-        <div class="titulo-subtitulo-container">
-            <div class="titulo">${data[1].trim()}</div>
-            <div class="subtitulo">${data[2].trim()}</div>
-        </div>
-        <div class="ilustracao" style="background-image: url('${illustrationPath}');"></div>
-        <div class="atributos">
-            <div class="atributo" style="background-color: rgba(217, 203, 128, 0.9);">
-                ${data[4].trim()} <span class="simbolo">&#9876;</span>
+        card.innerHTML = `
+            <div class="custo-container">
+                <div class="custo">${data[0].trim()}</div>
             </div>
-            <div class="atributo" style="background-color: rgba(217, 203, 128, 0.9);">
-                ${data[5].trim()} <span class="simbolo">&#9829;</span>
+            <div class="titulo-subtitulo-container">
+                <div class="titulo">${data[1].trim()}</div>
+                <div class="subtitulo">${data[2].trim()}</div>
             </div>
-            <div class="atributo" style="background-color: rgba(217, 203, 128, 0.9);">
-                ${data[6].trim()} <span class="simbolo">&#x3df;</span>
+            <div class="ilustracao" style="background-image: url('${illustrationPath}');"></div>
+            <div class="atributos">
+                <div class="atributo" style="background-color: rgba(217, 203, 128, 0.9);">
+                    ${data[4].trim()} <span class="simbolo">&#9876;</span>
+                </div>
+                <div class="atributo" style="background-color: rgba(217, 203, 128, 0.9);">
+                    ${data[5].trim()} <span class="simbolo">&#9829;</span>
+                </div>
+                <div class="atributo" style="background-color: rgba(217, 203, 128, 0.9);">
+                    ${data[6].trim()} <span class="simbolo">&#x3df;</span>
+                </div>
             </div>
-        </div>
-        <div class="tipo">${data[7].trim()}</div>
-        <div class="texto-lore-container">
-            <div class="texto">${data[8].trim()}</div>
-            <div class="lore">${data[9].trim()}</div>
-        </div>
-        <div class="id-container" style="background-color: ${rarityColor};">
-            <div class="id">${data[10].trim()}</div>
-        </div>
-        <div class="logo-container">
-            <img src="${logoPath}" alt="Logo">
-        </div>
-        <div class="novo-container">
-            <img src="${logoPath}" alt="Logo Novo">
-        </div>
-        <div class="count" style="display: none;">x1</div>
-    `;
+            <div class="tipo">${data[7].trim()}</div>
+            <div class="texto-lore-container">
+                <div class="texto">${data[8].trim()}</div>
+                <div class="lore">${data[9].trim()}</div>
+            </div>
+            <div class="id-container" style="background-color: ${rarityColor};">
+                <div class="id">${data[10].trim()}</div>
+            </div>
+            <div class="logo-container">
+                <img src="${logoPath}" alt="Logo">
+            </div>
+            <div class="novo-container">
+                <img src="${logoPath}" alt="Logo Novo">
+            </div>
+            <div class="count" style="display: none;">x1</div>
+        `;
 
-    // Adiciona os eventos de mouse
-    addPopupEvents(card, data);
+        // Adiciona os eventos de mouse
+        addPopupEvents(card, data);
 
-    return card;
+        return card;
     }
 
-function addToDeck(data, cardCount) {
-    const deckContainer = document.getElementById('deck-container');
-    const cardId = data[10].trim();
+    function addToDeck(data, cardCount) {
+        const deckContainer = document.getElementById('deck-container');
+        const cardId = data[10].trim();
 
-    let cardElement = deckContainer.querySelector(`[data-card-id="${cardId}"]`);
+        let cardElement = deckContainer.querySelector(`[data-card-id="${cardId}"]`);
 
-    if (!cardCount[cardId]) {
-        cardCount[cardId] = 0;
-    }
-
-    if (cardCount[cardId] < 4) {
-        cardCount[cardId]++;
-        if (!cardElement) {
-            const card = createCard(data, 1); // Escala original para o baralho
-            card.setAttribute('data-card-id', cardId);
-            card.addEventListener('dblclick', () => removeFromDeck(card, cardId, cardCount));
-            deckContainer.appendChild(card);
-            cardElement = card;
+        if (!cardCount[cardId]) {
+            cardCount[cardId] = 0;
         }
-        const countElement = cardElement.querySelector('.count');
-        if (cardCount[cardId] > 1) {
-            countElement.style.display = 'flex';
-            countElement.textContent = `x${cardCount[cardId]}`;
+
+        if (cardCount[cardId] < 4) {
+            cardCount[cardId]++;
+            if (!cardElement) {
+                const card = createCard(data, 1); // Escala original para o baralho
+                card.setAttribute('data-card-id', cardId);
+                card.addEventListener('dblclick', () => removeFromDeck(card, cardId, cardCount));
+                deckContainer.appendChild(card);
+                cardElement = card;
+            }
+            const countElement = cardElement.querySelector('.count');
+            if (cardCount[cardId] > 1) {
+                countElement.style.display = 'flex';
+                countElement.textContent = `x${cardCount[cardId]}`;
+            } else {
+                countElement.style.display = 'none';
+            }
+
+            // Garantir que a carta adicionada recentemente fique visível
+            cardElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else {
-            countElement.style.display = 'none';
+            alert('Você só pode adicionar no máximo 4 cópias de cada carta.');
         }
-
-        // Garantir que a carta adicionada recentemente fique visível
-        cardElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    } else {
-        alert('Você só pode adicionar no máximo 4 cópias de cada carta.');
     }
-}
 
-function removeFromDeck(card, cardId, cardCount) {
-    const countElement = card.querySelector('.count');
-    if (cardCount[cardId] > 1) {
-        cardCount[cardId]--;
-        countElement.textContent = `x${cardCount[cardId]}`;
-        if (cardCount[cardId] === 1) {
-            countElement.style.display = 'none';
+    function removeFromDeck(card, cardId, cardCount) {
+        const countElement = card.querySelector('.count');
+        if (cardCount[cardId] > 1) {
+            cardCount[cardId]--;
+            countElement.textContent = `x${cardCount[cardId]}`;
+            if (cardCount[cardId] === 1) {
+                countElement.style.display = 'none';
+            }
+        } else {
+            card.remove();
+            delete cardCount[cardId];
         }
-    } else {
-        card.remove();
-        delete cardCount[cardId];
     }
-}
-
 
     function getColorByRarity(rarity) {
         switch(rarity) {
@@ -277,4 +276,42 @@ function removeFromDeck(card, cardId, cardCount) {
             hidePopup();
         });
     }
+
+    // Adiciona os eventos do menu deslizante do deck
+    document.getElementById('toggle-deck-menu').addEventListener('click', function() {
+        const deckMenu = document.getElementById('deck-menu');
+        if (deckMenu.classList.contains('open')) {
+            deckMenu.classList.remove('open');
+        } else {
+            deckMenu.classList.add('open');
+        }
+    });
+
+    document.getElementById('open-deck').addEventListener('click', function() {
+        const savedDeck = localStorage.getItem('deck');
+        if (savedDeck) {
+            const deckIds = savedDeck.split(',');
+            deckIds.forEach(id => {
+                const cardData = cardsData.find(card => card[10].trim() === id);
+                if (cardData) {
+                    addToDeck(cardData, {});
+                }
+            });
+        } else {
+            alert('Nenhum deck salvo encontrado.');
+        }
+    });
+
+    document.getElementById('save-deck').addEventListener('click', function() {
+        const deckContainer = document.getElementById('deck-container');
+        const cardElements = deckContainer.querySelectorAll('.card');
+        const cardIds = Array.from(cardElements).map(card => card.getAttribute('data-card-id'));
+        localStorage.setItem('deck', cardIds.join(','));
+        alert('Deck salvo com sucesso!');
+    });
+
+    document.getElementById('print-deck').addEventListener('click', function() {
+        // Função de impressão a ser implementada no futuro
+        alert('Função de impressão ainda não implementada.');
+    });
 });
