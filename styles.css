@@ -334,6 +334,10 @@ body {
         top: 0;
         width: 21cm; /* A4 width */
         height: 29.7cm; /* A4 height */
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .print-page {
@@ -342,16 +346,16 @@ body {
         page-break-after: always;
         width: 21cm; /* A4 width */
         height: 29.7cm; /* A4 height */
-        padding: 1cm;
+        padding: 0.5cm; /* Reduced padding */
         box-sizing: border-box;
     }
 
     .print-card {
         width: 6.3cm; /* TCG card width */
         height: 8.8cm; /* TCG card height */
-        margin: 0.3cm;
+        margin: 0.2cm; /* Reduced margin */
         box-sizing: border-box;
-        border: 1px solid #000;
+        border: 1px solid #000; /* Ensuring border is printed */
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -360,7 +364,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 1cm;
+        padding: 0.5cm; /* Reduced padding */
     }
 
     .print-card * {
