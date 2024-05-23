@@ -41,32 +41,33 @@ body {
 }
 
 #filter-container h3, #filter-container h4 {
-    margin: 10px 0;
+    margin: 5px 0; /* Ajuste do espaçamento vertical */
+    font-size: 0.9em; /* Redução do tamanho da fonte */
 }
 
 #filter-container input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: 5px; /* Redução do espaçamento entre o checkbox e o texto */
 }
 
 #filter-container label {
-    font-size: 0.9em;
+    font-size: 0.8em; /* Redução do tamanho da fonte */
 }
 
 #filter-container select {
     width: 100%;
-    font-size: 0.9em;
-    margin-bottom: 10px;
+    font-size: 0.8em; /* Redução do tamanho da fonte */
+    margin-bottom: 5px; /* Ajuste do espaçamento vertical */
 }
 
 #filter-container button {
     width: 100%;
-    font-size: 0.9em;
-    padding: 10px;
-    margin-bottom: 10px; /* Adiciona espaço entre os botões */
+    font-size: 0.8em; /* Redução do tamanho da fonte */
+    padding: 5px; /* Redução do padding dos botões */
+    margin-bottom: 5px; /* Ajuste do espaçamento vertical */
 }
 
 #filter-container hr {
-    margin: 20px 0; /* Adiciona espaço antes e depois do separador */
+    margin: 10px 0; /* Ajuste do espaçamento vertical do separador */
 }
 
 #top-container {
