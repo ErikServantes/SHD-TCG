@@ -320,3 +320,36 @@ body {
     z-index: 1000;
     pointer-events: none;
 }
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #print-area, #print-area * {
+        visibility: visible;
+    }
+    #print-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .print-page {
+        display: flex;
+        flex-wrap: wrap;
+        page-break-after: always;
+        width: 21cm; /* A4 width */
+        height: 29.7cm; /* A4 height */
+    }
+
+    .print-card {
+        width: 6.3cm; /* TCG card width */
+        height: 8.8cm; /* TCG card height */
+        margin: 0.5cm;
+        box-sizing: border-box;
+        border: 1px solid #000;
+        background-size: cover;
+    }
+}
+
