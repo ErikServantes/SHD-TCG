@@ -107,9 +107,9 @@ body {
 }
 
 .card {
-    width: 137px;
+    width: 139,76px;
     height: 200px;
-    border: 5px solid #000;
+    border: 6px solid #000;
     margin: 10px;
     position: relative;
     background-size: cover;
