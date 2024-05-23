@@ -346,14 +346,14 @@ body {
         page-break-after: always;
         width: 21cm; /* A4 width */
         height: 29.7cm; /* A4 height */
-        padding: 0.5cm; /* Reduced padding */
+        padding: 0.1cm; /* Reduced padding */
         box-sizing: border-box;
     }
 
     .print-card {
         width: 6.3cm; /* TCG card width */
         height: 8.8cm; /* TCG card height */
-        margin: 0.2cm; /* Reduced margin */
+        margin: 0.1cm; /* Reduced margin */
         box-sizing: border-box;
         border: 1px solid #000; /* Ensuring border is printed */
         background-size: cover;
@@ -364,7 +364,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 0.5cm; /* Reduced padding */
+        padding: 0; /* Reduced padding */
     }
 
     .print-card * {
@@ -373,20 +373,23 @@ body {
     }
 
     .print-card .custo-container {
-        top: 0;
-        left: 0;
+        position: absolute;
+        top: 5px;
+        left: 5px;
     }
 
     .print-card .titulo-subtitulo-container {
-        top: 0;
-        left: 0;
-        right: 0;
+        position: absolute;
+        top: 5px;
+        left: 20px;
+        right: 5px;
     }
 
     .print-card .ilustracao {
-        top: 0;
-        left: 0;
-        right: 0;
+        position: absolute;
+        top: 25px;
+        left: 5px;
+        right: 5px;
         height: 40%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -394,39 +397,43 @@ body {
     }
 
     .print-card .atributos {
-        top: 0;
-        left: 0;
-        right: 0;
+        position: absolute;
+        top: 70%;
+        left: 5px;
+        right: 5px;
     }
 
     .print-card .tipo {
-        top: 0;
-        left: 0;
-        right: 0;
+        position: absolute;
+        top: 85%;
+        left: 5px;
+        right: 5px;
     }
 
     .print-card .texto-lore-container {
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        position: absolute;
+        top: 90%;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
     }
 
     .print-card .id-container {
-        bottom: 0;
-        left: 0;
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
     }
 
     .print-card .logo-container {
-        bottom: 0;
-        right: 0;
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
     }
 
     .print-card .novo-container {
-        bottom: 0;
+        position: absolute;
+        bottom: 5px;
         left: 50%;
         transform: translateX(-50%);
     }
 }
-
-
