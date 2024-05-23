@@ -367,7 +367,46 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function printDeck() {
-        // Implementar a funcionalidade de imprimir um baralho
-        alert('Imprimir Baralho: funcionalidade a ser implementada.');
+        const deckContainer = document.getElementById('deck-container');
+        const cardsInDeck = Array.from(deckContainer.querySelectorAll('.card'));
+        if (cardsInDeck.length === 0) {
+            alert('Nenhuma carta no baralho para imprimir.');
+            return;
+        }
+
+        const printArea = document.createElement('div');
+        printArea.id = 'print-area';
+        document.body.appendChild(printArea);
+
+        let page = document.createElement('div');
+        page.className = 'print-page';
+        printArea.appendChild(page);
+
+        cardsInDeck.forEach(card => {
+            const cardId = card.querySelector('.id').textContent.trim();
+            const countElement = card.querySelector('.count');
+            const count = countElement ? parseInt(countElement.textContent.replace('x', '')) : 1;
+
+            for (let i = 0; i < count; i++) {
+                const cardData = cardsData.find(c => c[10].trim() === cardId);
+                if (cardData) {
+                    const printCard = createCard(cardData, 1);
+                    printCard.classList.add('print-card');
+                    page.appendChild(printCard);
+
+                    // Start a new page if the current one has 9 cards
+                    if (page.childElementCount === 9) {
+                        page = document.createElement('div');
+                        page.className = 'print-page';
+                        printArea.appendChild(page);
+                    }
+                }
+            }
+        });
+
+        window.print();
+
+        // Remove print area after printing
+        document.body.removeChild(printArea);
     }
 });
