@@ -332,7 +332,8 @@ body {
         position: absolute;
         left: 0;
         top: 0;
-        width: 100%;
+        width: 21cm; /* A4 width */
+        height: 29.7cm; /* A4 height */
     }
 
     .print-page {
@@ -350,6 +351,9 @@ body {
         box-sizing: border-box;
         border: 1px solid #000;
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
+
 
