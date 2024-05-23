@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     let cardsData = [];
+    let deckModified = false;
 
     fetch('cards.csv')
         .then(response => {
@@ -66,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('open-deck').addEventListener('click', () => openDeck());
         document.getElementById('save-deck').addEventListener('click', () => saveDeck());
         document.getElementById('print-deck').addEventListener('click', () => printDeck());
+        document.getElementById('deck-file-input').addEventListener('change', (event) => handleFileUpload(event.target.files));
     }
 
     function renderCards(cards) {
@@ -169,6 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function addToDeck(data, cardCount) {
+        deckModified = true;
         const deckContainer = document.getElementById('deck-container');
         const cardId = data[10].trim();
 
@@ -203,6 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function removeFromDeck(card, cardId, cardCount) {
+        deckModified = true;
         if (cardCount[cardId] > 1) {
             cardCount[cardId]--;
             const countElement = card.querySelector('.count');
@@ -286,8 +290,44 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function openDeck() {
-        // Implementar a funcionalidade de abrir um baralho
-        alert('Abrir Baralho: funcionalidade a ser implementada.');
+        if (deckModified) {
+            const saveDeckFirst = confirm('Você deseja salvar o baralho atual antes de abrir um novo?');
+            if (saveDeckFirst) {
+                saveDeck();
+            }
+        }
+
+        document.getElementById('deck-file-input').click();
+    }
+
+    function handleFileUpload(files) {
+        if (files.length === 0) {
+            return;
+        }
+
+        const file = files[0];
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            const content = event.target.result;
+            const cardIds = content.split('\n').map(id => id.trim()).filter(id => id);
+            loadDeck(cardIds);
+        };
+        reader.readAsText(file);
+    }
+
+    function loadDeck(cardIds) {
+        const deckContainer = document.getElementById('deck-container');
+        deckContainer.innerHTML = '';
+        const cardCount = {};
+
+        cardIds.forEach(cardId => {
+            const cardData = cardsData.find(card => card[10].trim() === cardId);
+            if (cardData) {
+                addToDeck(cardData, cardCount);
+            }
+        });
+
+        deckModified = false;
     }
 
     function saveDeck() {
@@ -318,8 +358,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const blob = new Blob([deckData.join('\n')], { type: 'text/plain' });
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
-        link.download = `${deckName}.txt`;
+        link.download = `${deckName}.SHD`;
         link.click();
+
+        deckModified = false;
     }
 
     function printDeck() {
