@@ -62,6 +62,11 @@ body {
     width: 100%;
     font-size: 0.9em;
     padding: 10px;
+    margin-bottom: 10px; /* Adiciona espaço entre os botões */
+}
+
+#filter-container hr {
+    margin: 20px 0; /* Adiciona espaço antes e depois do separador */
 }
 
 #top-container {
