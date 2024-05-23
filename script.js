@@ -297,6 +297,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
+        // Limpa o valor do input de arquivo para garantir que o evento change dispare mesmo se o mesmo arquivo for selecionado
+        document.getElementById('deck-file-input').value = '';
         document.getElementById('deck-file-input').click();
     }
 
