@@ -353,5 +353,78 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        position: relative;
+        page-break-inside: avoid;
+    }
+
+    .print-card .custo-container, 
+    .print-card .titulo-subtitulo-container,
+    .print-card .ilustracao,
+    .print-card .atributos,
+    .print-card .tipo,
+    .print-card .texto-lore-container,
+    .print-card .id-container,
+    .print-card .logo-container,
+    .print-card .novo-container {
+        position: absolute;
+        background: none;
+        z-index: 2;
+    }
+
+    .print-card .custo-container {
+        top: 5%;
+        left: 5%;
+    }
+
+    .print-card .titulo-subtitulo-container {
+        top: 10%;
+        left: 10%;
+        right: 10%;
+    }
+
+    .print-card .ilustracao {
+        top: 20%;
+        left: 10%;
+        right: 10%;
+        height: 40%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .print-card .atributos {
+        top: 60%;
+        left: 10%;
+        right: 10%;
+    }
+
+    .print-card .tipo {
+        top: 70%;
+        left: 10%;
+        right: 10%;
+    }
+
+    .print-card .texto-lore-container {
+        top: 75%;
+        left: 10%;
+        right: 10%;
+        bottom: 10%;
+    }
+
+    .print-card .id-container {
+        bottom: 5%;
+        left: 5%;
+    }
+
+    .print-card .logo-container {
+        bottom: 5%;
+        right: 5%;
+    }
+
+    .print-card .novo-container {
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
+
