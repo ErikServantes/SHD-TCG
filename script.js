@@ -291,8 +291,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function saveDeck() {
-        // Implementar a funcionalidade de salvar um baralho
-        alert('Salvar Baralho: funcionalidade a ser implementada.');
+        const deckContainer = document.getElementById('deck-container');
+        const cardsInDeck = Array.from(deckContainer.querySelectorAll('.card'));
+        if (cardsInDeck.length === 0) {
+            alert('Nenhuma carta no baralho para salvar.');
+            return;
+        }
+
+        const deckName = prompt('Digite o nome do baralho:');
+        if (!deckName) {
+            alert('Nome do baralho é necessário para salvar.');
+            return;
+        }
+
+        const deckData = cardsInDeck.reduce((deck, card) => {
+            const cardId = card.querySelector('.id').textContent.trim();
+            const countElement = card.querySelector('.count');
+            const count = countElement ? parseInt(countElement.textContent.replace('x', '')) : 1;
+
+            for (let i = 0; i < count; i++) {
+                deck.push(cardId);
+            }
+            return deck;
+        }, []);
+
+        const blob = new Blob([deckData.join('\n')], { type: 'text/plain' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = `${deckName}.txt`;
+        link.click();
     }
 
     function printDeck() {
