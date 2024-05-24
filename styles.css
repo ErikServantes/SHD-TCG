@@ -1,3 +1,326 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: white;
+    border-right: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    width: 200px;
+    transform: translateX(-200px);
+}
+
+#filter-sidebar.open {
+    transform: translateX(0);
+}
+
+#toggle-filter {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 5px 10px;
+    z-index: 1001;
+}
+
+#filter-container {
+    padding: 10px;
+}
+
+#filter-container h3, #filter-container h4 {
+    margin: 5px 0; /* Ajuste do espaçamento vertical */
+    font-size: 0.9em; /* Redução do tamanho da fonte */
+}
+
+#filter-container input[type="checkbox"] {
+    margin-right: 5px; /* Redução do espaçamento entre o checkbox e o texto */
+}
+
+#filter-container label {
+    font-size: 0.8em; /* Redução do tamanho da fonte */
+}
+
+#filter-container select {
+    width: 100%;
+    font-size: 0.8em; /* Redução do tamanho da fonte */
+    margin-bottom: 5px; /* Ajuste do espaçamento vertical */
+}
+
+#filter-container button {
+    width: 100%;
+    font-size: 0.8em; /* Redução do tamanho da fonte */
+    padding: 5px; /* Redução do padding dos botões */
+    margin-bottom: 5px; /* Ajuste do espaçamento vertical */
+}
+
+#filter-container hr {
+    margin: 10px 0; /* Ajuste do espaçamento vertical do separador */
+}
+
+#top-container {
+    display: flex;
+    height: 70%;
+    margin-left: 10px; /* Ajustado para o botão */
+}
+
+#card-preview {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: none; /* Esconde o container */
+}
+
+#card-list {
+    flex: 4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: auto;
+    padding: 10px;
+}
+
+#deck-container {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que o container cresça para adicionar novas filas */
+    align-items: flex-start;
+    height: 30%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    overflow-y: auto; /* Permitir rolagem vertical */
+    position: relative;
+}
+
+.card {
+    width: 140px;
+    height: 200px;
+    border: 5px solid #000;
+    margin: 10px;
+    position: relative;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+}
+
+.titulo-subtitulo-container {
+    position: absolute;
+    top: 1px;
+    left: 10px;
+    right: 0px;
+    height: 18px;
+    text-align: left;
+    padding: 0px 15px;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: 1;
+}
+
+.card .titulo {
+    font-size: 8px;
+    font-weight: bold;
+    height: 11px;
+}
+
+.card .subtitulo {
+    font-size: 6px;
+    height: 9px;
+}
+
+.custo-container {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1); /* Caixa semi-transparente */
+    border-radius: 50%; /* Faz o container ser circular */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
+    z-index: 2; /* Adicionado z-index maior */
+}
+
+.card .custo {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card .ilustracao {
+    position: absolute;
+    top: 21px; /* Topo da ilustração */
+    left: 0px;
+    width: 100%;
+    height: 90px; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card .atributos {
+    position: absolute;
+    top: 34px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 2;
+}
+
+.atributo {
+    width: auto; /* Permite que a largura se ajuste ao conteúdo */
+    min-width: 15px; /* Define a largura mínima */
+    height: 18px;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 8px; /* Tamanho da fonte do valor */
+    font-weight: bold;
+    color: black;
+    text-align: right; /* Alinha o texto à direita */
+    padding: 0 2px; /* Adicionado espaçamento entre o texto e a borda */
+    background-color: rgba(217, 203, 128, 0.9);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.atributo .simbolo {
+    font-size: 6px; /* Tamanho do simbolo */
+    margin-left: 2px; /* Adicionado espaçamento entre valor e símbolo */
+}
+
+.card .tipo {
+    position: absolute;
+    top: 105px;
+    left: 15px;
+    right: 15px;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px 0px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75); /* Sombra */
+}
+
+.card .texto-lore-container {
+    position: absolute;
+    top: 125px; 
+    left: 0px;
+    right: 0px;
+    bottom: 12px;
+    background-color: rgba(255, 255, 255, 0.7); /* Caixa semi-transparente */
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1; /* Z-index inferior ao do texto-lore-container */
+}
+
+.card .texto {
+    font-size: 9px;
+    text-align: justify;
+    margin-bottom: 5px; /* Espaço entre texto e lore */
+}
+
+.card .lore {
+    font-size: 5px;
+    font-style: italic;
+    text-align: center;
+}
+
+.card .id-container {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    left: 120px;
+    padding: 1px 4px;
+    border-radius: 1px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.card .id {
+    font-size: 5px;
+    text-align: right;
+    font-weight: bold;
+    color: black; /* Define a cor do texto como preto */
+}
+
+.logo-container {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 17px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3; /* Definindo um z-index alto para sobrepor o resto */
+}
+
+.logo-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.novo-container {
+    position: absolute;
+    top: 128px; /* Ajuste conforme necessário para alinhar verticalmente */
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 60px; /* Ajuste conforme necessário */
+    height: 60px; /* Ajuste conforme necessário */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Z-index inferior ao do texto-lore-container */
+    opacity: 0.1; /* Ajuste a opacidade para o efeito de marca d'água */
+}
+
+.novo-container img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.card .count {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-size: 28px; /* Dobro do tamanho original */
+    font-weight: bold;
+    border-radius: 50%;
+    width: 48px; /* Dobro do tamanho original */
+    height: 48px; /* Dobro do tamanho original */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.popup-card {
+    position: absolute;
+    transform: scale(2);
+    z-index: 1000;
+    pointer-events: none;
+}
+
 @media print {
     body * {
         visibility: hidden;
@@ -23,14 +346,14 @@
         page-break-after: always;
         width: 21cm; /* A4 width */
         height: 29.7cm; /* A4 height */
-        padding: 0.1cm; /* Minimum padding */
+        padding: 0.1cm; /* Reduced padding */
         box-sizing: border-box;
     }
 
     .print-card {
         width: 5.8cm; /* TCG card width */
         height: 8.3cm; /* TCG card height */
-        margin: 0.05cm; /* Reduced margin for 0.1cm total spacing */
+        margin: 0.1cm; /* Reduced margin */
         box-sizing: border-box;
         border: 0.25cm solid #000; /* Ensuring border is printed */
         background-size: cover;
@@ -41,7 +364,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 0; /* No padding inside the card */
+        padding: 0; /* Reduced padding */
     }
 
     .print-card * {
@@ -75,21 +398,21 @@
 
     .print-card .atributos {
         position: absolute;
-        top: 4.5cm;
+        top: 6.5cm;
         left: 0.5cm;
         right: 0.5cm;
     }
 
     .print-card .tipo {
         position: absolute;
-        top: 3.5cm;
+        top: 7.5cm;
         left: 0.5cm;
         right: 0.5cm;
     }
 
     .print-card .texto-lore-container {
         position: absolute;
-        top: 5cm;
+        top: 8cm;
         left: 0.5cm;
         right: 0.5cm;
         bottom: 0.5cm;
