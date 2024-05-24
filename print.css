@@ -26,7 +26,8 @@
         page-break-after: always;
         width: 21cm; /* A4 width */
         height: 29.7cm; /* A4 height */
-        padding: 0.1cm; /* Minimum padding */
+        padding: 0; /* No padding */
+        margin: 0;
         box-sizing: border-box;
         justify-content: center;
         align-content: center;
