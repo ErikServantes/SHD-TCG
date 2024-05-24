@@ -7,14 +7,17 @@
     }
     #print-area {
         position: absolute;
-        left: 0;
-        top: 0;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         width: 21cm; /* A4 width */
         height: 29.7cm; /* A4 height */
         padding: 0;
         margin: 0;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
     }
 
     .print-page {
@@ -25,12 +28,14 @@
         height: 29.7cm; /* A4 height */
         padding: 0.1cm; /* Minimum padding */
         box-sizing: border-box;
+        justify-content: center;
+        align-content: center;
     }
 
     .print-card {
         width: 5.8cm; /* TCG card width */
         height: 8.3cm; /* TCG card height */
-        margin: 0.1cm; /* Minimum margin */
+        margin: 0.05cm; /* Reduced margin for minimum line spacing */
         box-sizing: border-box;
         border: 0.25cm solid #000; /* Ensuring border is printed */
         background-size: cover;
