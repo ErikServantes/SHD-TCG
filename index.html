@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHD-TCG</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="print.css" media="print">
 </head>
 <body>
     <div id="filter-sidebar">
@@ -32,10 +33,10 @@
                 </select>
             </div>
             <button id="reset-filters">Reset Filtros</button>
-            <hr> <!-- Separador -->
             <button id="open-deck">Abrir Baralho</button>
             <button id="save-deck">Salvar Baralho</button>
             <button id="print-deck">Imprimir Baralho</button>
+            <input type="file" id="deck-file-input" accept=".SHD" style="display: none;">
         </div>
     </div>
     <div id="top-container">
@@ -44,6 +45,6 @@
     </div>
     <div id="deck-container"></div>
     <script src="script.js"></script>
-    <input type="file" id="deck-file-input" accept=".SHD" style="display:none;" />
+    <script src="print.js"></script>
 </body>
 </html>
