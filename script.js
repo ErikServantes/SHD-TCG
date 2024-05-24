@@ -1,5 +1,6 @@
+let cardsData = [];
+
 document.addEventListener('DOMContentLoaded', function() {
-    let cardsData = [];
     let deckModified = false;
 
     fetch('cards.csv')
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function populateFilters(cards) {
         const culturas = [...new Set(cards.map(card => card[3]).filter(cultura => cultura))];
-        const tipos = [...new Set(cards.map(card => card[7]).filter(tipo => tipo))];
+        const tipos = [...new Set(cards.map(card[7]).filter(tipo => tipo))];
 
         const culturaFilters = document.getElementById('cultura-filters');
         culturas.forEach(cultura => {
