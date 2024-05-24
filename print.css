@@ -54,8 +54,8 @@
         font-size: 16px;
         top: 0.02cm;
         left: 0.1cm;
-        width:0.8cm;
-        height: 0.8cm;
+        width:0.76cm;
+        height: 0.76cm;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -72,7 +72,7 @@
         top: 0.05cm;
         left: 0.5cm;
         right: 0cm;
-        height: 0.75cm;
+        height: 0.71cm;
         text-align: left;
         padding: 0px 0.6cm;
         background-color: rgba(255, 255, 255, 0.75);
@@ -81,7 +81,7 @@
 
     .print-card .ilustracao {
         position: absolute;
-        top: 1cm;
+        top: 0.8cm;
         left: 0cm;
         right: 0cm;
         height: 3.8cm;
