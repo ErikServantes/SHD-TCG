@@ -41,33 +41,27 @@ body {
 }
 
 #filter-container h3, #filter-container h4 {
-    margin: 5px 0; /* Ajuste do espaçamento vertical */
-    font-size: 0.9em; /* Redução do tamanho da fonte */
+    margin: 10px 0;
 }
 
 #filter-container input[type="checkbox"] {
-    margin-right: 5px; /* Redução do espaçamento entre o checkbox e o texto */
+    margin-right: 10px;
 }
 
 #filter-container label {
-    font-size: 0.8em; /* Redução do tamanho da fonte */
+    font-size: 0.9em;
 }
 
 #filter-container select {
     width: 100%;
-    font-size: 0.8em; /* Redução do tamanho da fonte */
-    margin-bottom: 5px; /* Ajuste do espaçamento vertical */
+    font-size: 0.9em;
+    margin-bottom: 10px;
 }
 
 #filter-container button {
     width: 100%;
-    font-size: 0.8em; /* Redução do tamanho da fonte */
-    padding: 5px; /* Redução do padding dos botões */
-    margin-bottom: 5px; /* Ajuste do espaçamento vertical */
-}
-
-#filter-container hr {
-    margin: 10px 0; /* Ajuste do espaçamento vertical do separador */
+    font-size: 0.9em;
+    padding: 10px;
 }
 
 #top-container {
@@ -107,7 +101,7 @@ body {
 }
 
 .card {
-    width: 140px;
+    width: 137px;
     height: 200px;
     border: 5px solid #000;
     margin: 10px;
@@ -319,121 +313,4 @@ body {
     transform: scale(2);
     z-index: 1000;
     pointer-events: none;
-}
-
-@media print {
-    body * {
-        visibility: hidden;
-    }
-    #print-area, #print-area * {
-        visibility: visible;
-    }
-    #print-area {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 21cm; /* A4 width */
-        height: 29.7cm; /* A4 height */
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .print-page {
-        display: flex;
-        flex-wrap: wrap;
-        page-break-after: always;
-        width: 21cm; /* A4 width */
-        height: 29.7cm; /* A4 height */
-        padding: 0.1cm; /* Reduced padding */
-        box-sizing: border-box;
-    }
-
-    .print-card {
-        width: 5.8cm; /* TCG card width */
-        height: 8.3cm; /* TCG card height */
-        margin: 0.1cm; /* Reduced margin */
-        box-sizing: border-box;
-        border: 0.25cm solid #000; /* Ensuring border is printed */
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: relative;
-        page-break-inside: avoid;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 0; /* Reduced padding */
-    }
-
-    .print-card * {
-        background: none;
-        z-index: 2;
-    }
-
-    .print-card .custo-container {
-        position: absolute;
-        top: 0.5cm;
-        left: 0.5cm;
-    }
-
-    .print-card .titulo-subtitulo-container {
-        position: absolute;
-        top: 0.5cm;
-        left: 1.5cm;
-        right: 0.5cm;
-    }
-
-    .print-card .ilustracao {
-        position: absolute;
-        top: 2cm;
-        left: 0.5cm;
-        right: 0.5cm;
-        height: 4cm;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    .print-card .atributos {
-        position: absolute;
-        top: 6.5cm;
-        left: 0.5cm;
-        right: 0.5cm;
-    }
-
-    .print-card .tipo {
-        position: absolute;
-        top: 7.5cm;
-        left: 0.5cm;
-        right: 0.5cm;
-    }
-
-    .print-card .texto-lore-container {
-        position: absolute;
-        top: 8cm;
-        left: 0.5cm;
-        right: 0.5cm;
-        bottom: 0.5cm;
-    }
-
-    .print-card .id-container {
-        position: absolute;
-        bottom: 0.5cm;
-        left: 0.5cm;
-    }
-
-    .print-card .logo-container {
-        position: absolute;
-        bottom: 0.5cm;
-        right: 0.5cm;
-    }
-
-    .print-card .novo-container {
-        position: absolute;
-        bottom: 0.5cm;
-        left: 50%;
-        transform: translateX(-50%);
-    }
 }
