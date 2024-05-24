@@ -51,13 +51,13 @@
 
     .print-card .custo-container {
         position: absolute;
-        top: 0.5cm;
-        left: 0.5cm;
+        top: 0.1cm;
+        left: 0.1cm;
     }
 
     .print-card .titulo-subtitulo-container {
         position: absolute;
-        top: 0.5cm;
+        top: 0.1cm;
         left: 1.5cm;
         right: 0.5cm;
     }
@@ -65,9 +65,9 @@
     .print-card .ilustracao {
         position: absolute;
         top: 2cm;
-        left: 0.5cm;
-        right: 0.5cm;
-        height: 4cm;
+        left: 0cm;
+        right: 0cm;
+        height: 3.8cm;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -75,8 +75,8 @@
 
     .print-card .atributos {
         position: absolute;
-        top: 4.5cm;
-        left: 0.5cm;
+        top: 2.5cm;
+        /*left: 0.5cm;*/
         right: 0.5cm;
     }
 
@@ -90,26 +90,26 @@
     .print-card .texto-lore-container {
         position: absolute;
         top: 5cm;
-        left: 0.5cm;
-        right: 0.5cm;
+        left: 0cm;
+        right: 0cm;
         bottom: 0.5cm;
     }
 
     .print-card .id-container {
         position: absolute;
-        bottom: 0.5cm;
-        left: 0.5cm;
+        bottom: 0.1cm;
+        right: 0.1cm;
     }
 
     .print-card .logo-container {
         position: absolute;
-        bottom: 0.5cm;
-        right: 0.5cm;
+        bottom: 0.1cm;
+        right: 0.25cm;
     }
 
     .print-card .novo-container {
         position: absolute;
-        bottom: 0.5cm;
+        bottom: 1cm;
         left: 50%;
         transform: translateX(-50%);
     }
