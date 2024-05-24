@@ -1,0 +1,116 @@
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #print-area, #print-area * {
+        visibility: visible;
+    }
+    #print-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 21cm; /* A4 width */
+        height: 29.7cm; /* A4 height */
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .print-page {
+        display: flex;
+        flex-wrap: wrap;
+        page-break-after: always;
+        width: 21cm; /* A4 width */
+        height: 29.7cm; /* A4 height */
+        padding: 0.1cm; /* Reduced padding */
+        box-sizing: border-box;
+    }
+
+    .print-card {
+        width: 5.8cm; /* TCG card width */
+        height: 8.3cm; /* TCG card height */
+        margin: 0.1cm; /* Reduced margin */
+        box-sizing: border-box;
+        border: 0.25cm solid #000; /* Ensuring border is printed */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        page-break-inside: avoid;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0; /* Reduced padding */
+    }
+
+    .print-card * {
+        background: none;
+        z-index: 2;
+    }
+
+    .print-card .custo-container {
+        position: absolute;
+        top: 0.5cm;
+        left: 0.5cm;
+    }
+
+    .print-card .titulo-subtitulo-container {
+        position: absolute;
+        top: 0.5cm;
+        left: 1.5cm;
+        right: 0.5cm;
+    }
+
+    .print-card .ilustracao {
+        position: absolute;
+        top: 2cm;
+        left: 0.5cm;
+        right: 0.5cm;
+        height: 4cm;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .print-card .atributos {
+        position: absolute;
+        top: 6.5cm;
+        left: 0.5cm;
+        right: 0.5cm;
+    }
+
+    .print-card .tipo {
+        position: absolute;
+        top: 7.5cm;
+        left: 0.5cm;
+        right: 0.5cm;
+    }
+
+    .print-card .texto-lore-container {
+        position: absolute;
+        top: 8cm;
+        left: 0.5cm;
+        right: 0.5cm;
+        bottom: 0.5cm;
+    }
+
+    .print-card .id-container {
+        position: absolute;
+        bottom: 0.5cm;
+        left: 0.5cm;
+    }
+
+    .print-card .logo-container {
+        position: absolute;
+        bottom: 0.5cm;
+        right: 0.5cm;
+    }
+
+    .print-card .novo-container {
+        position: absolute;
+        bottom: 0.5cm;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
