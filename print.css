@@ -28,8 +28,8 @@
     }
 
     .print-card {
-        width: 5.8cm; /* TCG card width */
-        height: 8.3cm; /* TCG card height */
+        width: 6.3cm; /* TCG card width */
+        height: 8.8cm; /* TCG card height */
         margin: 0.1cm; /* Reduced margin */
         box-sizing: border-box;
         border: 0.25cm solid #000; /* Ensuring border is printed */
