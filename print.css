@@ -51,6 +51,7 @@
 
     .print-card .custo-container {
         position: absolute;
+        font-size: 12px;
         top: 0.1cm;
         left: 0.1cm;
     }
