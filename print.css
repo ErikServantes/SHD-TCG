@@ -127,7 +127,13 @@
     .print-card .logo-container {
         position: absolute;
         bottom: 0.1cm;
-        right: 0.25cm;
+        right: 0.1cm;
+        width: 0.7cm;
+        height: 0.7cm;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3; /* Definindo um z-index alto para sobrepor o resto */
     }
 
     .print-card .novo-container {
