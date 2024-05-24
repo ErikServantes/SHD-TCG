@@ -75,21 +75,21 @@
 
     .print-card .atributos {
         position: absolute;
-        top: 6.5cm;
+        top: 3cm;
         left: 0.5cm;
         right: 0.5cm;
     }
 
     .print-card .tipo {
         position: absolute;
-        top: 7.5cm;
+        top: 5cm;
         left: 0.5cm;
         right: 0.5cm;
     }
 
     .print-card .texto-lore-container {
         position: absolute;
-        top: 4cm;
+        top: 5.5cm;
         left: 0.5cm;
         right: 0.5cm;
         bottom: 0.5cm;
