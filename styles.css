@@ -15,7 +15,6 @@
         margin: 0;
         display: flex;
         flex-wrap: wrap;
-        box-sizing: border-box; /* Garantir que o tamanho da caixa inclua bordas e preenchimento */
     }
 
     .print-page {
@@ -25,15 +24,14 @@
         width: 21cm; /* A4 width */
         height: 29.7cm; /* A4 height */
         padding: 0.1cm; /* Minimum padding */
-        box-sizing: border-box; /* Garantir que o tamanho da caixa inclua bordas e preenchimento */
+        box-sizing: border-box;
     }
 
     .print-card {
         width: 5.8cm; /* TCG card width */
         height: 8.3cm; /* TCG card height */
         margin: 0.05cm; /* Reduced margin for 0.1cm total spacing */
-        padding: 0; /* Remove any padding */
-        box-sizing: border-box; /* Garantir que o tamanho da caixa inclua bordas e preenchimento */
+        box-sizing: border-box;
         border: 0.25cm solid #000; /* Ensuring border is printed */
         background-size: cover;
         background-repeat: no-repeat;
@@ -43,6 +41,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding: 0; /* No padding inside the card */
     }
 
     .print-card * {
