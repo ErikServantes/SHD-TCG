@@ -80,13 +80,13 @@
         z-index: 1;
     }
     .card .titulo {
-        font-size: 10px;
+        font-size: 7px;
         font-weight: bold;
         /*height: 11px;*/
     }
 
     .card .subtitulo {
-        font-size: 8px;
+        font-size: 6px;
         /*height: 9px;*/
     }
 
