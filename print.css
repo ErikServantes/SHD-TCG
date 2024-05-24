@@ -114,6 +114,28 @@
         line-height: 2;
     }
 
+    .atributo {
+        width: auto; /* Permite que a largura se ajuste ao conteúdo */
+        min-width: 0.7cm; /* Define a largura mínima */
+        height: 0.7cmpx;
+        margin-bottom: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 8px; /* Tamanho da fonte do valor */
+        font-weight: bold;
+        color: black;
+        text-align: right; /* Alinha o texto à direita */
+        padding: 0 2px; /* Adicionado espaçamento entre o texto e a borda */
+        background-color: rgba(217, 203, 128, 0.9);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
+    }
+
+    .atributo .simbolo {
+        font-size: 6px; /* Tamanho do simbolo */
+        margin-left: 2px; /* Adicionado espaçamento entre valor e símbolo */
+    }
+    
     .print-card .tipo {
         position: absolute;
         font-size: 10px;
