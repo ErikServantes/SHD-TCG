@@ -51,13 +51,14 @@
 
     .print-card .custo-container {
         position: absolute;
-        font-size: 50px;
+        font-size: 14px;
         top: 0.1cm;
         left: 0.1cm;
     }
 
     .print-card .titulo-subtitulo-container {
         position: absolute;
+        font-size: 10px;
         top: 0.1cm;
         left: 1.5cm;
         right: 0.5cm;
@@ -76,6 +77,9 @@
 
     .print-card .atributos {
         position: absolute;
+        width: 0.8cm;
+        height: 0.8cm;
+        font-size: 10px;
         top: 2.5cm;
         /*left: 0.5cm;*/
         right: 0.5cm;
@@ -83,6 +87,7 @@
 
     .print-card .tipo {
         position: absolute;
+        font-size: 10px;
         top: 3.5cm;
         left: 0.5cm;
         right: 0.5cm;
@@ -90,6 +95,7 @@
 
     .print-card .texto-lore-container {
         position: absolute;
+        font-size: 10px;
         top: 5cm;
         left: 0cm;
         right: 0cm;
@@ -98,6 +104,7 @@
 
     .print-card .id-container {
         position: absolute;
+        font-size: 6px;
         bottom: 0.1cm;
         right: 0.1cm;
     }
