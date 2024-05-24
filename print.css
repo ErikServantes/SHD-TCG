@@ -60,11 +60,11 @@
         position: absolute;
         font-size: 10px;
         top: 0.1cm;
-        left: 1cm;
+        left: 0.5cm;
         right: 0cm;
-        height: 1.3cm;
+        height: 0.6cm;
         text-align: left;
-        padding: 0px 1.3cm;
+        padding: 0px 0.6cm;
         background-color: rgba(255, 255, 255, 0.75);
         z-index: 1;
     }
