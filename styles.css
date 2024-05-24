@@ -351,11 +351,11 @@ body {
     }
 
     .print-card {
-        width: 6.3cm; /* TCG card width */
-        height: 8.8cm; /* TCG card height */
+        width: 5.8cm; /* TCG card width */
+        height: 8.3cm; /* TCG card height */
         margin: 0.1cm; /* Reduced margin */
         box-sizing: border-box;
-        border: 1px solid #000; /* Ensuring border is printed */
+        border: 0.25cm solid #000; /* Ensuring border is printed */
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -374,23 +374,23 @@ body {
 
     .print-card .custo-container {
         position: absolute;
-        top: 5px;
-        left: 5px;
+        top: 0.5cm;
+        left: 0.5cm;
     }
 
     .print-card .titulo-subtitulo-container {
         position: absolute;
-        top: 5px;
-        left: 20px;
-        right: 5px;
+        top: 0.5cm;
+        left: 1.5cm;
+        right: 0.5cm;
     }
 
     .print-card .ilustracao {
         position: absolute;
-        top: 25px;
-        left: 5px;
-        right: 5px;
-        height: 40%;
+        top: 2cm;
+        left: 0.5cm;
+        right: 0.5cm;
+        height: 4cm;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -398,41 +398,41 @@ body {
 
     .print-card .atributos {
         position: absolute;
-        top: 70%;
-        left: 5px;
-        right: 5px;
+        top: 6.5cm;
+        left: 0.5cm;
+        right: 0.5cm;
     }
 
     .print-card .tipo {
         position: absolute;
-        top: 85%;
-        left: 5px;
-        right: 5px;
+        top: 7.5cm;
+        left: 0.5cm;
+        right: 0.5cm;
     }
 
     .print-card .texto-lore-container {
         position: absolute;
-        top: 90%;
-        left: 5px;
-        right: 5px;
-        bottom: 5px;
+        top: 8cm;
+        left: 0.5cm;
+        right: 0.5cm;
+        bottom: 0.5cm;
     }
 
     .print-card .id-container {
         position: absolute;
-        bottom: 5px;
-        left: 5px;
+        bottom: 0.5cm;
+        left: 0.5cm;
     }
 
     .print-card .logo-container {
         position: absolute;
-        bottom: 5px;
-        right: 5px;
+        bottom: 0.5cm;
+        right: 0.5cm;
     }
 
     .print-card .novo-container {
         position: absolute;
-        bottom: 5px;
+        bottom: 0.5cm;
         left: 50%;
         transform: translateX(-50%);
     }
