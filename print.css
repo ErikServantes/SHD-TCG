@@ -60,8 +60,13 @@
         position: absolute;
         font-size: 10px;
         top: 0.1cm;
-        left: 1.5cm;
-        right: 0.5cm;
+        left: 1cm;
+        right: 0cm;
+        height: 1.3cm;
+        text-align: left;
+        padding: 0px 1.3cm;
+        background-color: rgba(255, 255, 255, 0.75);
+        z-index: 1;
     }
 
     .print-card .ilustracao {
