@@ -106,7 +106,7 @@
         width: 0.8cm;
         height: 0.8cm;
         font-size: 10px;
-        top: 2.5cm;
+        top: 2cm;
         right: 0cm;
         display: flex;
         flex-direction: column;
@@ -117,8 +117,6 @@
     .atributo {
         width: auto; /* Permite que a largura se ajuste ao conteúdo */
         min-width: 0.7cm; /* Define a largura mínima */
-        top: 3cm;
-        right: 0cm;
         height: 0.7cm;
         margin-bottom: 2px;
         display: flex;
