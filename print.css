@@ -151,6 +151,12 @@
         left: 0cm;
         right: 0cm;
         bottom: 0.5cm;
+        background-color: rgba(255, 255, 255, 0.7); /* Caixa semi-transparente */
+        padding: 5px 10px;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        z-index: 1; /* Z-index inferior ao do texto-lore-container */
     }
 
     .print-card .id-container {
