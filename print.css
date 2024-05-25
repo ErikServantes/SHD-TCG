@@ -7,15 +7,18 @@
     }
     #print-area {
         position: absolute;
-        left: 0;
-        top: 0;
+        left: 50%;
+        top: 50%;
         width: 21cm; /* A4 width */
         height: 29.7cm; /* A4 height */
         padding: 0; /* Remove padding */
         margin: 0;
+        transform: translate(-50%, -50%);
         display: flex;
         flex-wrap: wrap;
         gap: 0; /* Remove any gap between items */
+        justify-content: center;
+        align-items: center;
     }
 
     .print-page {
@@ -229,6 +232,7 @@
         transform: translateX(-50%);
     }
 }
+
 /* Regra temporária para debug */
 * {
     border: 1px solid red !important;
