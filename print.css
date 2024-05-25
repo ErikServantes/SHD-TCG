@@ -173,6 +173,7 @@
     
     .print-card .id-container {
         position: absolute;
+        width: 0.7cm;
         font-size: 8px;
         bottom: 0.1cm;
         right: 0.1cm;
