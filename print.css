@@ -117,6 +117,7 @@
     .atributo {
         width: auto; /* Permite que a largura se ajuste ao conteúdo */
         min-width: 0.7cm; /* Define a largura mínima */
+        top: 3cm;
         right: 0cm;
         height: 0.7cm;
         margin-bottom: 2px;
