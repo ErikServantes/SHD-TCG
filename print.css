@@ -69,7 +69,7 @@
 
     .print-card .titulo-subtitulo-container {
         position: absolute;
-        font-size: 4px;
+        /*font-size: 4px;*/
         top: 0.05cm;
         left: 0.5cm;
         right: 0cm;
