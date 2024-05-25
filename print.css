@@ -117,12 +117,13 @@
     .atributo {
         width: auto; /* Permite que a largura se ajuste ao conteúdo */
         min-width: 0.7cm; /* Define a largura mínima */
-        height: 0.7cmpx;
+        right: 0cm;
+        height: 0.7cm;
         margin-bottom: 2px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        font-size: 8px; /* Tamanho da fonte do valor */
+        font-size: 12px; /* Tamanho da fonte do valor */
         font-weight: bold;
         color: black;
         text-align: right; /* Alinha o texto à direita */
@@ -132,7 +133,7 @@
     }
 
     .atributo .simbolo {
-        font-size: 6px; /* Tamanho do simbolo */
+        font-size: 9px; /* Tamanho do simbolo */
         margin-left: 2px; /* Adicionado espaçamento entre valor e símbolo */
     }
     
