@@ -15,12 +15,12 @@
         margin: 0;
         display: flex;
         flex-wrap: wrap;
+        gap: 0; /* Remove any gap between items */
     }
 
     .print-page {
         display: flex;
         flex-wrap: wrap;
-        gap: 0px;
         page-break-after: always;
         width: 21cm; /* A4 width */
         height: 29.7cm; /* A4 height */
@@ -31,7 +31,8 @@
     .print-card {
         width: 5.8cm; /* TCG card width */
         height: 8.3cm; /* TCG card height */
-        margin: 0.05cm; /* Reduced margin for 0.1cm total spacing */
+        margin: 0; /* Removed margin */
+        padding: 0; /* No padding inside the card */
         box-sizing: border-box;
         border: 0.25cm solid #000; /* Ensuring border is printed */
         background-size: cover;
@@ -42,7 +43,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 0; /* No padding inside the card */
     }
 
     .print-card * {
@@ -56,7 +56,7 @@
         font-weight: bold;
         top: 0.02cm;
         left: 0.1cm;
-        width:0.76cm;
+        width: 0.76cm;
         height: 0.76cm;
         display: flex;
         align-items: center;
@@ -65,7 +65,6 @@
         border-radius: 50%; /* Faz o container ser circular */
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
         z-index: 2; /* Adicionado z-index maior */
-        
     }
 
     .print-card .titulo-subtitulo-container {
@@ -80,6 +79,7 @@
         background-color: rgba(255, 255, 255, 0.75);
         z-index: 1;
     }
+
     .card .titulo {
        /* font-size: 4.5px;*/
         font-weight: bold;
@@ -189,7 +189,7 @@
         text-align: right;
         font-weight: bold;
         color: black; /* Define a cor do texto como preto */
-}
+    }
     .novo-container {
         position: absolute;
         top: 5cm;
@@ -228,7 +228,4 @@
         left: 50%;
         transform: translateX(-50%);
     }
-}
-* {
-    border: 1px solid red !important;
 }
