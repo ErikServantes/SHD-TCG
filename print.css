@@ -146,7 +146,7 @@
 
     .print-card .texto-lore-container {
         position: absolute;
-        font-size: 10px;
+        /*font-size: 10px;*/
         top: 5cm;
         left: 0cm;
         right: 0cm;
@@ -159,6 +159,18 @@
         z-index: 1; /* Z-index inferior ao do texto-lore-container */
     }
 
+    .card .texto {
+        font-size: 12px;
+        text-align: justify;
+        margin-bottom: 0.5cm; /* Espaço entre texto e lore */
+    }
+
+    .card .lore {
+        font-size: 8px;
+        font-style: italic;
+        text-align: center;
+    }
+    
     .print-card .id-container {
         position: absolute;
         font-size: 6px;
