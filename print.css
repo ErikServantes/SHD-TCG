@@ -9,8 +9,8 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: 19cm; /* A4 width */
-        height: 27.7cm; /* A4 height */
+        width: 21cm; /* A4 width */
+        height: 29.7cm; /* A4 height */
         padding: 0; /* Remove padding */
         margin: 0;
         display: flex;
