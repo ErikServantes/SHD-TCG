@@ -106,7 +106,7 @@
         width: 0.8cm;
         height: 0.8cm;
         font-size: 10px;
-        top: 1.4cm;
+        top: 1.6cm;
         left: 4.5cm;
         display: flex;
         flex-direction: column;
@@ -139,7 +139,7 @@
     .print-card .tipo {
         position: absolute;
         font-size: 12px;
-        top: 4.2cm;
+        top: 4.1cm;
         left: 0.75cm;
         right: 0.75cm;
         font-weight: bold;
