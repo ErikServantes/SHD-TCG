@@ -42,7 +42,6 @@
         flex-direction: column;
         justify-content: space-between;
         padding: 0; /* No padding inside the card */
-        margin-bottom: 0,05cm; /* Reduza este valor para diminuir o espaçamento */
     }
 
     .print-card * {
@@ -228,4 +227,7 @@
         left: 50%;
         transform: translateX(-50%);
     }
+}
+* {
+    border: 1px solid red !important;
 }
