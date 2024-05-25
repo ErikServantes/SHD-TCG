@@ -24,7 +24,7 @@
         width: 21cm; /* A4 width */
         height: 29.7cm; /* A4 height */
         padding: 0.1cm; /* Minimum padding */
-        box-sizing: border-box;
+        box-sizing: content-box;
     }
 
     .print-card {
