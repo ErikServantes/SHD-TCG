@@ -191,11 +191,12 @@
 }
     .novo-container {
         position: absolute;
-        top: 5cm; /* Ajuste conforme necessário para alinhar verticalmente */
+        top: 5cm;
+        bottom: 0.5cm;
         left: 50%;
         transform: translate(-50%, 0);
-        width: 60px; /* Ajuste conforme necessário */
-        height: 60px; /* Ajuste conforme necessário */
+        /*width: 60px; /* Ajuste conforme necessário */
+        /*height: 60px; /* Ajuste conforme necessário */
         display: flex;
         align-items: center;
         justify-content: center;
