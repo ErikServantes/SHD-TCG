@@ -103,15 +103,15 @@
 
     .print-card .atributos {
         position: absolute;
-        width: 0.8cm;
-        height: 0.8cm;
+        width: 0.75cm;
+        height: 0.75cm;
         font-size: 10px;
         top: 1.6cm;
         left: 4.5cm;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        line-height: 4;
+        line-height: 10;
     }
 
     .atributo {
