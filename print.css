@@ -229,3 +229,7 @@
         transform: translateX(-50%);
     }
 }
+/* Regra temporária para debug */
+* {
+    border: 1px solid red !important;
+}
