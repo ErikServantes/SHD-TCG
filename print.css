@@ -190,7 +190,24 @@
         font-weight: bold;
         color: black; /* Define a cor do texto como preto */
 }
+    .novo-container {
+        position: absolute;
+        top: 5cm; /* Ajuste conforme necessário para alinhar verticalmente */
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 60px; /* Ajuste conforme necessário */
+        height: 60px; /* Ajuste conforme necessário */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1; /* Z-index inferior ao do texto-lore-container */
+        opacity: 0.1; /* Ajuste a opacidade para o efeito de marca d'água */
+    }
 
+    .novo-container img {
+        max-width: 80%;
+        max-height: 80%;
+    }
 
     .print-card .logo-container {
         position: absolute;
