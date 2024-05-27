@@ -15,13 +15,11 @@
         margin: 0;
         display: flex;
         flex-wrap: wrap;
-        gap: 10px
-    }
+   }
 
     .print-page {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px
         page-break-after: always;
         width: 21cm; /* A4 width */
         height: 29.7cm; /* A4 height */
