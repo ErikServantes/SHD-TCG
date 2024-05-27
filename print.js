@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     page.appendChild(printCard);
 
                     // Start a new page if the current one has 9 cards
-                    if (page.childElementCount === 9) {
+                    if (page.childElementCount === 12) {
                         page = document.createElement('div');
                         page.className = 'print-page';
                         printArea.appendChild(page);
